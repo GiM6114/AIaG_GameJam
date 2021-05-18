@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Awake()
+    {
+        CursorManager.ActivateCursor();
+    }
+
     public void QuitButton()
     {
         Application.Quit();
