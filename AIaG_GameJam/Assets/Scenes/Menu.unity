@@ -7935,7 +7935,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1413819560}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9385,12 +9386,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413819559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1194029296}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1413819561
 MonoBehaviour:
@@ -9411,11 +9412,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cdb2d9de8cb214c47b41f1442b708ddc, type: 3}
     volume: 1
     pitch: 1
+    isSFX: 1
     source: {fileID: 0}
   - name: ButtonPress
     clip: {fileID: 8300000, guid: 062f3e5233fc4ab44935ae4203521fdf, type: 3}
     volume: 1
     pitch: 1
+    isSFX: 1
     source: {fileID: 0}
 --- !u!1 &1416406206
 GameObject:
@@ -11456,7 +11459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1643912349
 GameObject:

@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
         foreach(Sound s in sounds)
         {
             AudioSource aS = gameObject.AddComponent<AudioSource>();
-            aS.outputAudioMixerGroup = SFXMixer;
+            aS.outputAudioMixerGroup = s.isSFX ? SFXMixer : musicMixer;
             s.source = aS;
             s.source.clip = s.clip;
             s.source.volume = s.volume;
