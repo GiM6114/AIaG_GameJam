@@ -26,6 +26,7 @@ public class PlayerObject : MonoBehaviour
             PhysicItem physicItem = itemsNearby[0].GetComponent<PhysicItem>();
             item = physicItem.item;
             physicItem.PickedUp();
+
             return;
         }
 
@@ -47,7 +48,7 @@ public class PlayerObject : MonoBehaviour
                     {
                         item = null;
                     }
-                    break;
+                    return;
                 }
             }
         }

@@ -17,5 +17,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 movement = ctx.ReadValue<Vector2>();
         rb.velocity = movement*speed;
+
+        if(movement.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (movement.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 }
