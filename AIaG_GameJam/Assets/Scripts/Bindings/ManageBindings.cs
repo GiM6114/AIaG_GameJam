@@ -33,7 +33,6 @@ public static class ManageBindings
                 {
                     string newBinding = PlayerPrefs.GetString(name + i, action.bindings[i].effectivePath);
                     action.ApplyBindingOverride(i, newBinding);
-                    Debug.Log(action.bindings[i].effectivePath);
                 }
             }
         }

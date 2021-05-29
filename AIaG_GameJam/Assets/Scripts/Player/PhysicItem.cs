@@ -6,7 +6,7 @@ public class PhysicItem : MonoBehaviour
 {
     [SerializeField] public Item item;
 
-    private void Awake()
+    private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = item.sprite;
     }
