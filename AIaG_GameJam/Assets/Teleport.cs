@@ -8,9 +8,7 @@ public class Teleport : MonoBehaviour
     [SerializeField] Animator blackScreenAnimator;
     [SerializeField] Transform otherWay;
     [SerializeField] Vector3 direction;
-    [SerializeField] float countdown;
 
-    float timer;
     bool startTp;
     GameObject player;
 
@@ -22,17 +20,27 @@ public class Teleport : MonoBehaviour
         }
 
         player = collision.gameObject;
-        PlayerInput pI = collision.gameObject.GetComponent<PlayerInput>();
+        PlayerInput pI = player.GetComponent<PlayerInput>();
         pI.DeactivateInput();
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.velocity = direction * 3;
+        blackScreenAnimator.SetBool("Black", true);
         StartCoroutine("Teleportation");
     }
 
     IEnumerator Teleportation()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
+        otherWay.gameObject.SetActive(false);
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         player.transform.position = otherWay.localPosition;
-        yield return new WaitForSeconds(1f);
+        rb.velocity = direction * 3;
+        blackScreenAnimator.SetBool("Black", false);
+        yield return new WaitForSeconds(0.8f);
+        rb.velocity = Vector3.zero;
+        yield return new WaitForSeconds(0.6f);
+        otherWay.gameObject.SetActive(true);
+        PlayerInput pI = player.GetComponent<PlayerInput>();
+        pI.ActivateInput();
     }
 }
