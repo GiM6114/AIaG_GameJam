@@ -5,27 +5,51 @@ using Pathfinding;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [SerializeField] Transform defaultPosition;
     [SerializeField] float speed;
+    [SerializeField] float distanceGiveUp;
 
     bool isChasing = false;
+    public bool instantChase;
     List<Vector2> path;
     AIPath aiPath;
     AIDestinationSetter destinationSetter;
     GameObject player;
+    [System.NonSerialized] public Vector3 defaultPosition;
 
     private void Awake()
     {
+        if(defaultPosition == null)
+        {
+            defaultPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+        }
         player = GameObject.FindGameObjectWithTag("Player");
         destinationSetter = GetComponent<AIDestinationSetter>();
         aiPath = GetComponent<AIPath>();
 
         aiPath.maxSpeed = speed;
         destinationSetter.target = player.transform;
-        Idle();
+        if (instantChase)
+        {
+            AngerTrigger();
+        }
+        else
+        {
+            Idle();
+        }
     }
 
-    private void AngerTrigger()
+    private void Update()
+    {
+        if (isChasing)
+        {
+            if(Vector2.Distance(transform.position, player.transform.position) > distanceGiveUp)
+            {
+                Idle();
+            }
+        }
+    }
+
+    public void AngerTrigger()
     {
         isChasing = true;
         aiPath.canSearch = true;
@@ -34,6 +58,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Idle()
     {
+        transform.localPosition = defaultPosition;
         isChasing = false;
         aiPath.canSearch = false;
         aiPath.canMove = false;

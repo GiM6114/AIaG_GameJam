@@ -7,7 +7,9 @@ using System;
 public class PlayerObject : MonoBehaviour
 {
     [SerializeField] GameObject defaultPhysicItem;
-    Item item = null;
+    [SerializeField] SpriteRenderer sR;
+
+    public Item item = null;
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
     List<Interactible> interactiblesNearby = new List<Interactible>();
 
@@ -26,19 +28,14 @@ public class PlayerObject : MonoBehaviour
             PhysicItem physicItem = itemsNearby[0].GetComponent<PhysicItem>();
             item = physicItem.item;
             physicItem.PickedUp();
-
+            sR.sprite = item.sprite;
             return;
         }
 
         // cas ou pas d'obj proche
-        if (item == null)
-        {
-            return;
-        }
-
         foreach (Interactible interactible in interactiblesNearby)
         {
-            if(interactible is InteractibleWithItem)
+            if(item != null && interactible is InteractibleWithItem)
             {
                 InteractibleWithItem interactibleWithItem = interactible as InteractibleWithItem;
                 if (interactibleWithItem.itemNeededName == item.name)
@@ -50,6 +47,12 @@ public class PlayerObject : MonoBehaviour
                     }
                     return;
                 }
+            }
+            else if(interactible is InteractibleWithoutItem)
+            {
+                InteractibleWithoutItem interactibleWithoutItem = interactible as InteractibleWithoutItem;
+                interactibleWithoutItem.OnInteraction();
+                return;
             }
         }
     }
@@ -70,10 +73,11 @@ public class PlayerObject : MonoBehaviour
         {
             return;
         }
-        GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position, Quaternion.identity);
+        GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward, Quaternion.identity);
         PhysicItem itemDroppedPI = itemDropped.GetComponent<PhysicItem>();
         itemDroppedPI.item = item;
         item = null;
+        sR.sprite = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

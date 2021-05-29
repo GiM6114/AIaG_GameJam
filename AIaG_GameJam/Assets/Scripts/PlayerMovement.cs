@@ -15,16 +15,22 @@ public class PlayerMovement : MonoBehaviour
         
     public void Move(InputAction.CallbackContext ctx)
     {
+
         Vector2 movement = ctx.ReadValue<Vector2>();
         rb.velocity = movement*speed;
-
-        if(movement.x >= 0.01f)
+        if (!ctx.performed)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            return;
         }
-        else if (movement.x >= 0.01f)
+        if (movement.x >= 0.05f)
         {
+            Debug.Log(movement.x);
             transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (movement.x <= -0.05f)
+        {
+            Debug.Log(movement.x);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 }
