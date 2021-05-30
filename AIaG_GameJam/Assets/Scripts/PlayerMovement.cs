@@ -24,12 +24,10 @@ public class PlayerMovement : MonoBehaviour
         }
         if (movement.x >= 0.05f)
         {
-            Debug.Log(movement.x);
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else if (movement.x <= -0.05f)
         {
-            Debug.Log(movement.x);
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }

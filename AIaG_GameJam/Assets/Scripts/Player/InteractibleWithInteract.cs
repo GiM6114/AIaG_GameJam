@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class InteractibleWithItem : Interactible
+public class InteractibleWithInteract : Interactible
 {
+    public bool needItem = false;
     public string itemNeededName;
     public bool itemDestructionAfterUse;
 
