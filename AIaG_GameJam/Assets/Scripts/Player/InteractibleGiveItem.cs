@@ -19,6 +19,7 @@ public class InteractibleGiveItem : InteractibleWithInteract
         base.OnInteraction();
         GameObject pIGO = Instantiate(defaultPhysicItem, transform.position + placeToPutObject, Quaternion.identity);
         pIGO.GetComponent<PhysicItem>().item = itemToGive;
+        pIGO.name = itemToGive.name;
         given = true;
     }
 }

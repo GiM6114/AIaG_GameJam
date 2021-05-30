@@ -12,8 +12,8 @@ public class EnemyBehaviour : MonoBehaviour
     public bool instantChase;
     List<Vector2> path;
     AIPath aiPath;
-    AIDestinationSetter destinationSetter;
-    GameObject player;
+    [System.NonSerialized] public AIDestinationSetter destinationSetter;
+    [System.NonSerialized] public GameObject player;
     [System.NonSerialized] public Vector3 defaultPosition;
 
     private void Awake()
