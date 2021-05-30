@@ -21,7 +21,7 @@ public class Teleport : MonoBehaviour
 
         player = collision.gameObject;
         PlayerInput pI = player.GetComponent<PlayerInput>();
-        pI.DeactivateInput();
+        pI.SwitchCurrentActionMap("Stop");
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         rb.velocity = direction * 3;
         blackScreenAnimator.SetBool("Black", true);
@@ -36,11 +36,11 @@ public class Teleport : MonoBehaviour
         player.transform.position = otherWay.localPosition;
         rb.velocity = direction * 3;
         blackScreenAnimator.SetBool("Black", false);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.7f);
         rb.velocity = Vector3.zero;
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.1f);
         otherWay.gameObject.SetActive(true);
         PlayerInput pI = player.GetComponent<PlayerInput>();
-        pI.ActivateInput();
+        pI.SwitchCurrentActionMap("Gameplay");
     }
 }

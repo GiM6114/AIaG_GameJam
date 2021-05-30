@@ -44,6 +44,7 @@ public class PlayerObject : MonoBehaviour
                     if (interactibleWithItem.itemDestructionAfterUse)
                     {
                         item = null;
+                        sR.sprite = null;
                     }
                     return;
                 }

@@ -128,6 +128,12 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Stop",
+            "id": "f5e95399-1921-44e5-8a16-6bcc2e1c2232",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []

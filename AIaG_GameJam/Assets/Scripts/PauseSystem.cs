@@ -11,6 +11,11 @@ public class PauseSystem : MonoBehaviour
     [SerializeField] List<GameObject> activeByDefault;
     [SerializeField] List<GameObject> notActiveByDefault;
 
+    private void Start()
+    {
+        CursorManager.DeactivateCursor();
+    }
+
     public void OnPause(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed)
@@ -36,6 +41,11 @@ public class PauseSystem : MonoBehaviour
             {
                 gO.SetActive(false);
             }
+            CursorManager.ActivateCursor();
+        }
+        else
+        {
+            CursorManager.DeactivateCursor();
         }
         menu.SetActive(pause);
     }
