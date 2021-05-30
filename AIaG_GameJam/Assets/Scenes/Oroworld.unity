@@ -444,10 +444,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLaw: 0
+  hasBeenBroken: 0
   itemNeededName: Boot
   itemDestructionAfterUse: 1
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   shears: {fileID: 0}
+  donne: 0
 --- !u!212 &77128863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1551,10 +1553,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLaw: 1
-  racoon: {fileID: 4052637252298587931, guid: 0d402f1a00ba72b4e8f15f2280b33d17, type: 3}
+  needItem: 0
+  itemNeededName: 
+  itemDestructionAfterUse: 0
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
+  itemToGive: {fileID: 0}
+  placeToPutObject: {x: 0, y: 0, z: 0}
+  racoon: {fileID: 4052637252298587931, guid: 0d402f1a00ba72b4e8f15f2280b33d17, type: 3}
   racoonCountdown: 2
-  key: {fileID: 11400000, guid: d51ccddbc3ea4b0448d42073bf5ed693, type: 2}
 --- !u!61 &305155521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1744,6 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLaw: 1
+  needItem: 0
   itemNeededName: Key
   itemDestructionAfterUse: 1
 --- !u!212 &486672296
@@ -2091,6 +2098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLaw: 1
+  needItem: 0
   itemNeededName: Key
   itemDestructionAfterUse: 1
 --- !u!212 &598361079
@@ -19552,10 +19560,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLaw: 1
+  hasBeenBroken: 0
   itemNeededName: FishingRod
   itemDestructionAfterUse: 1
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   boot: {fileID: 11400000, guid: 974709ca484db2e4f97b8ae739955c72, type: 2}
+  fished: 0
 --- !u!1 &1819796567
 GameObject:
   m_ObjectHideFlags: 0
@@ -20197,6 +20207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8386468}
     m_Modifications:
+    - target: {fileID: 4534233741099788515, guid: 190893c6b1c58764a83994594b5be852, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5272910417226227026, guid: 190893c6b1c58764a83994594b5be852, type: 3}
       propertyPath: m_fontStyle
       value: 16
@@ -20291,11 +20305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272910417226227037, guid: 190893c6b1c58764a83994594b5be852, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5272910417226227037, guid: 190893c6b1c58764a83994594b5be852, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.599
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 5272910417226227037, guid: 190893c6b1c58764a83994594b5be852, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
