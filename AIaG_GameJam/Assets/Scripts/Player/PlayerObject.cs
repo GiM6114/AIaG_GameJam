@@ -11,7 +11,7 @@ public class PlayerObject : MonoBehaviour
 
     public Item item = null;
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
-    List<Interactible> interactiblesNearby = new List<Interactible>();
+    List<InteractibleWithInteract> interactiblesNearby = new List<InteractibleWithInteract>();
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
@@ -33,7 +33,28 @@ public class PlayerObject : MonoBehaviour
         }
 
         // cas ou pas d'obj proche
-        foreach (Interactible interactible in interactiblesNearby)
+        foreach(InteractibleWithInteract interactible in interactiblesNearby)
+        {
+            if (interactible.needItem)
+            {
+                if(item.name != interactible.itemNeededName)
+                {
+                    break;
+                }
+            }
+            // on est sorti si besoin d'item et pas le bon item
+
+            interactible.OnInteraction();
+            if (interactible.itemDestructionAfterUse)
+            {
+                item = null;
+                sR.sprite = null;
+            }
+            return;
+        }
+
+
+        /*foreach (Interactible interactible in interactiblesNearby)
         {
             if(item != null && interactible is InteractibleWithItem)
             {
@@ -55,7 +76,7 @@ public class PlayerObject : MonoBehaviour
                 interactibleWithoutItem.OnInteraction();
                 return;
             }
-        }
+        }*/
     }
 
     public void OnDrop(InputAction.CallbackContext ctx)
@@ -90,7 +111,7 @@ public class PlayerObject : MonoBehaviour
         }
         if (collision.CompareTag("Interactible"))
         {
-            interactiblesNearby.Add(collision.gameObject.GetComponent<Interactible>());
+            interactiblesNearby.Add(collision.gameObject.GetComponent<InteractibleWithInteract>());
             return;
         }
 
@@ -105,7 +126,7 @@ public class PlayerObject : MonoBehaviour
         }
         if (collision.CompareTag("Interactible"))
         {
-            interactiblesNearby.Remove(collision.gameObject.GetComponent<Interactible>());
+            interactiblesNearby.Remove(collision.gameObject.GetComponent<InteractibleWithInteract>());
             return;
         }
     }
