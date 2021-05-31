@@ -12,6 +12,7 @@ public class Dog : MonoBehaviour
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] Item stick;
     [SerializeField] Animator camAnim;
+    [SerializeField] GameObject stickSprite;
 
     int state = 1; // 1 rien, 2 suit joueur, 3 va sur l'os, 4 cherche bâton
     PlayerObject pO;
@@ -34,21 +35,6 @@ public class Dog : MonoBehaviour
         EnablePathfinding(false, 0);
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Player") || pO.item == null)
-        {
-            return;
-        }
-
-        if(state == 1 && pO.item.name == "Bone")
-        {
-            // switch state from 1 to 2
-            EnablePathfinding(true, 1.75f, player.transform);
-            state = 2;
-        }
-    }*/
-
     private void Update()
     {
         if(state == 1 && pO.item != null && pO.item.name == "Bone" && Vector2.Distance(player.transform.position, transform.position) < 2)
@@ -60,9 +46,11 @@ public class Dog : MonoBehaviour
         {
             EnablePathfinding(true, 1.75f, player.transform);
             state = 5;
+            stickSprite.SetActive(true);
         }
         else if(state == 5 && destinationSetter.target == player.transform && aiPath.reachedDestination)
         {
+            stickSprite.SetActive(false);
             Vector3 direction = player.transform.position - transform.position;
             GameObject pIGO = Instantiate(defaultPhysicItem, transform.position + direction.normalized, Quaternion.identity);
             pIGO.GetComponent<PhysicItem>().item = stick;

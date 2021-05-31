@@ -15,9 +15,11 @@ public class Bear : MonoBehaviour
     AIPath aiPath;
     bool isChasing = false;
     Interactible interactible;
+    Rigidbody2D rb;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         aiPath = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         interactible = GetComponent<Interactible>();
@@ -41,6 +43,8 @@ public class Bear : MonoBehaviour
         isChasing = true;
         aiPath.canSearch = true;
         aiPath.canMove = true;
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
     }
 
     private void Idle()
@@ -49,5 +53,6 @@ public class Bear : MonoBehaviour
         isChasing = false;
         aiPath.canSearch = false;
         aiPath.canMove = false;
+        rb.constraints &= RigidbodyConstraints2D.FreezeAll;
     }
 }
