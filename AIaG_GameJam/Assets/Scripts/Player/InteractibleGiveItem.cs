@@ -21,7 +21,13 @@ public class InteractibleGiveItem : InteractibleWithInteract
         pIGO.GetComponent<PhysicItem>().item = itemToGive;
         pIGO.name = itemToGive.name;
         given = true;
-        transform.GetChild(0).gameObject.SetActive(false);
-        transform.GetChild(1).gameObject.SetActive(true);
+        if (transform.GetChild(0) != null) {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+        if (transform.GetChild(1) != null)
+        {
+            transform.GetChild(1).gameObject.SetActive(true);
+            GetComponent<Animator>().SetTrigger("traded");
+        }
     }
 }
