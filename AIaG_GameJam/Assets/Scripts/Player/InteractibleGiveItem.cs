@@ -21,5 +21,7 @@ public class InteractibleGiveItem : InteractibleWithInteract
         pIGO.GetComponent<PhysicItem>().item = itemToGive;
         pIGO.name = itemToGive.name;
         given = true;
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(true);
     }
 }
