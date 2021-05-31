@@ -79,11 +79,11 @@ public class Dog : MonoBehaviour
             }
         }
 
-        if (aiPath.velocity.x >= 0.05f)
+        if (aiPath.velocity.x >= 0.5f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-        else if (aiPath.velocity.x <= -0.05f)
+        else if (aiPath.velocity.x <= -0.5f)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }

@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: bfcaa433339596543b47dcf02ecdc409
+guid: 8dafa1b19df8586488d686b9faa3f0f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1480917699468073914
-    second: dog_0
+      213: 8745158979375974386
+    second: gamejam_ghost_0
   - first:
-      213: 9118213209582376027
-    second: dog_1
+      213: -7873020114704983718
+    second: gamejam_ghost_1
   - first:
-      213: -1146434942223613854
-    second: dog_2
+      213: 8147241979764845301
+    second: gamejam_ghost_2
   - first:
-      213: 4232618656017457076
-    second: dog_3
+      213: -361995244941649474
+    second: gamejam_ghost_3
   - first:
-      213: 8622651429821660651
-    second: dog_4
+      213: -5510749053069167437
+    second: gamejam_ghost_4
   - first:
-      213: 6148440367437093035
-    second: dog_5
+      213: 423058809066368470
+    second: gamejam_ghost_5
   - first:
-      213: 7623178905550315798
-    second: dog_6
+      213: 4595059174396903430
+    second: gamejam_ghost_6
   - first:
-      213: 1172281312028412848
-    second: dog_7
-  - first:
-      213: -5732640591474583860
-    second: dog_8
+      213: -5465019195138842421
+    second: gamejam_ghost_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +66,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -130,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dog_0
+      name: gamejam_ghost_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 18
-        width: 18
-        height: 18
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb126a2dc64d8410800000000000000
-      internalID: 1480917699468073914
+      spriteID: 2f7c50602cb0d5970800000000000000
+      internalID: 8745158979375974386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_1
+      name: gamejam_ghost_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
-        width: 18
-        height: 18
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b549e6f8a966a8e70800000000000000
-      internalID: 9118213209582376027
+      spriteID: a5911813be96db290800000000000000
+      internalID: -7873020114704983718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_2
+      name: gamejam_ghost_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 18
-        width: 18
-        height: 18
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2608aae7e7b0710f0800000000000000
-      internalID: -1146434942223613854
+      spriteID: 5faa8072a61d01170800000000000000
+      internalID: 8147241979764845301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_3
+      name: gamejam_ghost_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 18
-        width: 18
-        height: 18
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bf9c950e384dba30800000000000000
-      internalID: 4232618656017457076
+      spriteID: eb95fde1e3fe9faf0800000000000000
+      internalID: -361995244941649474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_4
+      name: gamejam_ghost_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bedb8886acfc9a770800000000000000
-      internalID: 8622651429821660651
+      spriteID: 3b4fd75fee2e583b0800000000000000
+      internalID: -5510749053069167437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_5
+      name: gamejam_ghost_5
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba892c730f5a35550800000000000000
-      internalID: 6148440367437093035
+      spriteID: 6dd2081deb10fd500800000000000000
+      internalID: 423058809066368470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_6
+      name: gamejam_ghost_6
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 611e39443d8fac960800000000000000
-      internalID: 7623178905550315798
+      spriteID: 600c3d339fde4cf30800000000000000
+      internalID: 4595059174396903430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_7
+      name: gamejam_ghost_7
       rect:
         serializedVersion: 2
-        x: 54
+        x: 48
         y: 0
-        width: 18
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,29 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bb484c64a7c44010800000000000000
-      internalID: 1172281312028412848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dog_8
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc61c2041c19170b0800000000000000
-      internalID: -5732640591474583860
+      spriteID: bc0ee073ff95824b0800000000000000
+      internalID: -5465019195138842421
       vertices: []
       indices: 
       edges: []
@@ -321,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0370fb574333cfb42993821355fec66c
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
