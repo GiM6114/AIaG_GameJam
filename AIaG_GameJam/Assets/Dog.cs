@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Dog : MonoBehaviour
 {
-    [SerializeField] PlayerObject pO;
-    EnemyBehaviour eB;
-    bool playerHasBone;
-    int etat = 0; // 0 rien, 1 suit joueur, 2 va sur l'os
+    [SerializeField] GameObject player;
+
+    int etat = 1; // 1 rien, 2 suit joueur, 3 va sur l'os, 4 cherche bâton
+    PlayerObject pO;
+    AIPath aiPath;
+    AIDestinationSetter destinationSetter;
 
     private void Awake()
     {
-        eB = GetComponent<EnemyBehaviour>();
+        pO = player.GetComponent<PlayerObject>();
+        pO.DropBone += OnBoneDropped;
+
+        aiPath.canMove = false;
+        aiPath.canSearch = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,31 +28,20 @@ public class Dog : MonoBehaviour
             return;
         }
 
-        if (playerHasBone)
+        if(etat == 1)
         {
-            etat = 1;
-            eB.AngerTrigger();
-            eB.destinationSetter.target = eB.player.transform;
+            // switch state from 1 to 2
+
         }
     }
 
     private void Update()
     {
-        playerHasBone = pO.item.name == "Bone";
-        if((etat == 1 || etat == 0) && !playerHasBone)
-        {
-            // le joueur vient de lacher l'os
-            etat = 2;
-            GameObject bone = GameObject.Find("Bone");
-            if(bone != null)
-            {
-                eB.destinationSetter.target = bone.transform;
-                etat = 2;
-            }
-            else
-            {
-                etat = 0;
-            }
-        }
+        
+    }
+
+    private void OnBoneDropped()
+    {
+
     }
 }

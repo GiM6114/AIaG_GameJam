@@ -5,7 +5,10 @@ using UnityEngine;
 public abstract class Interactible : MonoBehaviour
 {
     public bool isLaw;
+    public int lawIndex;
+
     private bool hasBeenBroken = false;
+
 
     // trucs qui arrivent quand on interagit (E ou entrer sur zone) avec un truc qui casse une règle
     public void Interacted()

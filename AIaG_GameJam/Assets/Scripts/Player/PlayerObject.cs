@@ -13,6 +13,8 @@ public class PlayerObject : MonoBehaviour
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
     List<InteractibleWithInteract> interactiblesNearby = new List<InteractibleWithInteract>();
 
+    public event Action DropBone;
+
     public void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed)
@@ -52,31 +54,6 @@ public class PlayerObject : MonoBehaviour
             }
             return;
         }
-
-
-        /*foreach (Interactible interactible in interactiblesNearby)
-        {
-            if(item != null && interactible is InteractibleWithItem)
-            {
-                InteractibleWithItem interactibleWithItem = interactible as InteractibleWithItem;
-                if (interactibleWithItem.itemNeededName == item.name)
-                {
-                    interactibleWithItem.OnInteraction();
-                    if (interactibleWithItem.itemDestructionAfterUse)
-                    {
-                        item = null;
-                        sR.sprite = null;
-                    }
-                    return;
-                }
-            }
-            else if(interactible is InteractibleWithoutItem)
-            {
-                InteractibleWithoutItem interactibleWithoutItem = interactible as InteractibleWithoutItem;
-                interactibleWithoutItem.OnInteraction();
-                return;
-            }
-        }*/
     }
 
     public void OnDrop(InputAction.CallbackContext ctx)
@@ -95,6 +72,12 @@ public class PlayerObject : MonoBehaviour
         {
             return;
         }
+
+        if(item.name == "Bone")
+        {
+            DropBone?.Invoke();
+        }
+
         GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward, Quaternion.identity);
         PhysicItem itemDroppedPI = itemDropped.GetComponent<PhysicItem>();
         itemDroppedPI.item = item;
