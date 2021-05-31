@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -10,11 +11,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     bool isChasing = false;
     public bool instantChase;
-    List<Vector2> path;
     AIPath aiPath;
-    [System.NonSerialized] public AIDestinationSetter destinationSetter;
-    [System.NonSerialized] public GameObject player;
-    [System.NonSerialized] public Vector3 defaultPosition;
+    [NonSerialized] public AIDestinationSetter destinationSetter;
+    [NonSerialized] public GameObject player;
+    [NonSerialized] public Vector3 defaultPosition;
 
     private void Awake()
     {
@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         aiPath.maxSpeed = speed;
         destinationSetter.target = player.transform;
+
         if (instantChase)
         {
             AngerTrigger();
@@ -35,6 +36,12 @@ public class EnemyBehaviour : MonoBehaviour
         else
         {
             Idle();
+        }
+
+        Interactible interactible = GetComponent<Interactible>();
+        if (interactible)
+        {
+            interactible.interacted += AngerTrigger;
         }
     }
 

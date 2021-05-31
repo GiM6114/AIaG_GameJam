@@ -51,8 +51,6 @@ public class Dog : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(aiPath.reachedEndOfPath);
-        Debug.Log(aiPath.reachedDestination);
         if(state == 1 && pO.item != null && pO.item.name == "Bone" && Vector2.Distance(player.transform.position, transform.position) < 2)
         {
             EnablePathfinding(true, 1.75f, player.transform);
@@ -107,6 +105,7 @@ public class Dog : MonoBehaviour
         if(state == 3)
         {
             EnablePathfinding(true, 1.75f, player.transform);
+            state = 2;
         }
     }
 

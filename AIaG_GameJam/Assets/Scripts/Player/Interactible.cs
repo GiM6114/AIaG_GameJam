@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public abstract class Interactible : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public abstract class Interactible : MonoBehaviour
 
     private bool hasBeenBroken = false;
 
+    [NonSerialized] public Action interacted;
+
 
     // trucs qui arrivent quand on interagit (E ou entrer sur zone) avec un truc qui casse une règle
     public void Interacted()
     {
+        interacted?.Invoke();
         if (!isLaw || hasBeenBroken)
         {
             return;
