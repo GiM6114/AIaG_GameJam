@@ -15,10 +15,6 @@ public class InteractibleWithArea : Interactible
         {
             Interacted();
             interacted?.Invoke();
-            if (!WorldEngine.i.HasRuleBeenBroke(lawIndex))
-            {
-                WorldEngine.i.BreakRuleSign(lawIndex);
-            }
             
         }
     }

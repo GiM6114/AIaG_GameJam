@@ -22,5 +22,10 @@ public abstract class Interactible : MonoBehaviour
         Debug.Log("Une règle a été brisée");
         // animations d'ui ou jsp quoi
 
+        if (!WorldEngine.i.HasRuleBeenBroke(lawIndex))
+        {
+            WorldEngine.i.BreakRuleSign(lawIndex);
+        }
+
     }
 }
