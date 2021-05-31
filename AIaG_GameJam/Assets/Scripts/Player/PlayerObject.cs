@@ -13,7 +13,8 @@ public class PlayerObject : MonoBehaviour
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
     List<InteractibleWithInteract> interactiblesNearby = new List<InteractibleWithInteract>();
 
-    public event Action DropBone;
+    public event Action<Transform> DropBone;
+    public event Action PickupBone;
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
@@ -31,6 +32,12 @@ public class PlayerObject : MonoBehaviour
             item = physicItem.item;
             physicItem.PickedUp();
             sR.sprite = item.sprite;
+
+            if(item.name == "Bone")
+            {
+                PickupBone?.Invoke();
+            }
+
             return;
         }
 
@@ -73,14 +80,15 @@ public class PlayerObject : MonoBehaviour
             return;
         }
 
-        if(item.name == "Bone")
-        {
-            DropBone?.Invoke();
-        }
-
         GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward, Quaternion.identity);
         PhysicItem itemDroppedPI = itemDropped.GetComponent<PhysicItem>();
         itemDroppedPI.item = item;
+
+        if (item.name == "Bone")
+        {
+            DropBone?.Invoke(itemDropped.transform);
+        }
+
         item = null;
         sR.sprite = null;
     }
