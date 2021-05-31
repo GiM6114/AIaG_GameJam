@@ -6,8 +6,11 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed;
+
     Rigidbody2D rb;
     Animator animator;
+
+    Vector2 movement;
 
     private void Awake()
     {
@@ -17,9 +20,14 @@ public class PlayerMovement : MonoBehaviour
         
     public void Move(InputAction.CallbackContext ctx)
     {
+        movement = ctx.ReadValue<Vector2>();
 
-        Vector2 movement = ctx.ReadValue<Vector2>();
-        rb.velocity = movement*speed;
+        if (ctx.canceled)
+        {
+            movement = Vector3.zero;
+            return;
+        }
+
         if (!ctx.performed)
         {
             return;
@@ -36,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        rb.velocity = movement * speed;
+
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick"))
         {
             return;

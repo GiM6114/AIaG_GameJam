@@ -132,8 +132,29 @@
         {
             "name": "Stop",
             "id": "f5e95399-1921-44e5-8a16-6bcc2e1c2232",
-            "actions": [],
-            "bindings": []
+            "actions": [
+                {
+                    "name": "Nothing",
+                    "type": "Button",
+                    "id": "3b4c43ee-f0a6-46ec-a7ea-6e72a77680f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "89d90e1c-73e4-4c93-9fe0-3ddfda23567f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Nothing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
