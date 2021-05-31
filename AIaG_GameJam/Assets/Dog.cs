@@ -21,6 +21,8 @@ public class Dog : MonoBehaviour
     PlayerInput pI;
     bool hasDiscoveredStick = false;
 
+    private Animator animator;
+
     private void Awake()
     {
         aiPath = GetComponent<AIPath>();
@@ -33,6 +35,8 @@ public class Dog : MonoBehaviour
         garden.interacted += OnGardenEnter;
 
         EnablePathfinding(false, 0);
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -58,6 +62,30 @@ public class Dog : MonoBehaviour
             pI.SwitchCurrentActionMap("Gameplay");
             state = 2;
             camAnim.SetBool("cinematique", false);
+        }
+
+        if (Mathf.Abs(aiPath.velocity.magnitude) >= 0.05f)
+        {
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("dog_walk"))
+            {
+                animator.Play("dog_walk");
+            }
+        }
+        else
+        {
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("dog_idle"))
+            {
+                animator.Play("dog_idle");
+            }
+        }
+
+        if (aiPath.velocity.x >= 0.05f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (aiPath.velocity.x <= -0.05f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 
