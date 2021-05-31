@@ -36,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick"))
+        {
+            return;
+        }
+
         if (Mathf.Abs(rb.velocity.magnitude) >= 0.05f)
         {
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_walk"))
@@ -48,6 +53,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.Play("player_idle");
             }
+        }
+    }
+
+    public void KickRequest()
+    {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick"))
+        {
+            animator.Play("player_kick");
         }
     }
 }

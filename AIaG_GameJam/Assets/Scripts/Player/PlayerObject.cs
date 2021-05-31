@@ -16,6 +16,13 @@ public class PlayerObject : MonoBehaviour
     public event Action<Transform> DropBone;
     public event Action PickupBone;
 
+    PlayerMovement playerMovement;
+
+    private void Awake()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
     public void OnInteract(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed)
@@ -51,7 +58,12 @@ public class PlayerObject : MonoBehaviour
                     break;
                 }
             }
+            else
+            {
+                playerMovement.KickRequest();
+            }
             // on est sorti si besoin d'item et pas le bon item
+
 
             interactible.OnInteraction();
             if (interactible.itemDestructionAfterUse)
@@ -61,6 +73,9 @@ public class PlayerObject : MonoBehaviour
             }
             return;
         }
+
+        // COUP DE PIED
+        playerMovement.KickRequest();
     }
 
     public void OnDrop(InputAction.CallbackContext ctx)
