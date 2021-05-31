@@ -9,6 +9,11 @@ public class InteractibleWithArea : Interactible
         if (collision.CompareTag("Player"))
         {
             Interacted();
+            if (!WorldEngine.i.HasRuleBeenBroke(lawIndex))
+            {
+                WorldEngine.i.BreakRuleSign(lawIndex);
+            }
+            
         }
     }
 }
