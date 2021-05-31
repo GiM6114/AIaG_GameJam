@@ -33,7 +33,7 @@ public class Bear : MonoBehaviour
         if(isChasing && Vector2.Distance(transform.position, player.transform.position) > distanceGiveUp)
         {
             Idle();
-        }   
+        }
     }
 
     private void AngerTrigger()
