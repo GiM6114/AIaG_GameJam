@@ -7,13 +7,16 @@ public class PlayerBench : MonoBehaviour
 {
     [SerializeField] GameObject bench;
     [SerializeField] Transform tpPlace;
+    public Color benchColor;
+    [SerializeField] InteractibleWithArea iWA;
 
-    bool isBlue;
+    [System.NonSerialized] public bool isBlue;
     PlayerInput pI;
     SpriteRenderer sR;
 
     private void Awake()
     {
+        iWA.interacted += OnWaterIn;
         bench.GetComponent<InteractibleWithInteract>().interacted += OnInteractedWithBench;
         sR = GetComponent<SpriteRenderer>();
     }
@@ -24,7 +27,7 @@ public class PlayerBench : MonoBehaviour
         bench.GetComponentInChildren<BoxCollider2D>().enabled = false;
         // changer sprite perso
         transform.localScale = new Vector3(-1,1,1);
-        sR.color = Color.blue;
+        sR.color = benchColor;
         // le tp sur le banc
         transform.position = tpPlace.position;
     }
@@ -32,5 +35,11 @@ public class PlayerBench : MonoBehaviour
     public void GetUp()
     {
         bench.GetComponentInChildren<BoxCollider2D>().enabled = true;
+    }
+
+    private void OnWaterIn()
+    {
+        sR.color = Color.white;
+        isBlue = false;
     }
 }

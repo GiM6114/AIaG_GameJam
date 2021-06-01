@@ -98,6 +98,7 @@ public class PlayerObject : MonoBehaviour
         GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward, Quaternion.identity);
         PhysicItem itemDroppedPI = itemDropped.GetComponent<PhysicItem>();
         itemDroppedPI.item = item;
+        itemDropped.name = item.name;
 
         if (item.name == "Bone")
         {
