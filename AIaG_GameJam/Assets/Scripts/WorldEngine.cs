@@ -47,10 +47,11 @@ public class WorldEngine : MonoBehaviour
 
     IEnumerator RuleAnim()
     {
-        /*
         pI.SwitchCurrentActionMap("Stop");
-        camAnim.SetBool("cinematique", true);*/
-        yield return new WaitForSeconds(0.04f);
+        camAnim.SetBool("cinematique", true);
+        yield return new WaitForSeconds(3f);
+        camAnim.SetBool("cinematique", false);
+        pI.SwitchCurrentActionMap("Gameplay");
     }
 
 }

@@ -484,6 +484,8 @@ MonoBehaviour:
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   itemToGive: {fileID: 11400000, guid: c749d201156bdf544bdcc900bbbfb263, type: 2}
   placeToPutObject: {x: 0, y: 1, z: 0}
+  text1: {fileID: 0}
+  text2: {fileID: 0}
 --- !u!212 &77128863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1273,6 +1275,8 @@ MonoBehaviour:
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   itemToGive: {fileID: 11400000, guid: d51ccddbc3ea4b0448d42073bf5ed693, type: 2}
   placeToPutObject: {x: 0, y: -1, z: 0}
+  text1: {fileID: 0}
+  text2: {fileID: 0}
   racoon: {fileID: 4052637252298587931, guid: 0d402f1a00ba72b4e8f15f2280b33d17, type: 3}
   racoonCountdown: 2
 --- !u!58 &305155522
@@ -1321,6 +1325,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &407495714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8343655021017256868, guid: 040b1b2b1d8e2af40a16670ff3f29452, type: 3}
+  m_PrefabInstance: {fileID: 7856463176957755346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &450123290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6738,6 +6747,8 @@ MonoBehaviour:
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   itemToGive: {fileID: 11400000, guid: 59ad4ae1817f5f94d95d152e8e2a19cc, type: 2}
   placeToPutObject: {x: -1, y: 0, z: 0}
+  text1: {fileID: 0}
+  text2: {fileID: 0}
 --- !u!1 &1024801832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3788562682901465265, guid: b3b3982d97ab82e4cbb1e6d1b5bb709a, type: 3}
@@ -14781,6 +14792,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1716865345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8861147221941418312, guid: 040b1b2b1d8e2af40a16670ff3f29452, type: 3}
+  m_PrefabInstance: {fileID: 7856463176957755346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732952074
 GameObject:
   m_ObjectHideFlags: 0
@@ -25044,6 +25060,8 @@ MonoBehaviour:
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   itemToGive: {fileID: 11400000, guid: 974709ca484db2e4f97b8ae739955c72, type: 2}
   placeToPutObject: {x: -1, y: 0, z: 0}
+  text1: {fileID: 0}
+  text2: {fileID: 0}
 --- !u!4 &1788043241
 Transform:
   m_ObjectHideFlags: 0
@@ -25999,6 +26017,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8745158979375974386, guid: 8dafa1b19df8586488d686b9faa3f0f5, type: 3}
+    - target: {fileID: 7856463175756673079, guid: 040b1b2b1d8e2af40a16670ff3f29452, type: 3}
+      propertyPath: text1
+      value: 
+      objectReference: {fileID: 1716865345}
+    - target: {fileID: 7856463175756673079, guid: 040b1b2b1d8e2af40a16670ff3f29452, type: 3}
+      propertyPath: text2
+      value: 
+      objectReference: {fileID: 407495714}
     - target: {fileID: 8343655021017256868, guid: 040b1b2b1d8e2af40a16670ff3f29452, type: 3}
       propertyPath: m_IsActive
       value: 0

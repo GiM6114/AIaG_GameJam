@@ -10,6 +10,9 @@ public class InteractibleGiveItem : InteractibleWithInteract
 
     [System.NonSerialized] public bool given = false;
 
+    public GameObject text1;
+    public GameObject text2;
+
     public override void OnInteraction()
     {
         if (given)
@@ -21,12 +24,12 @@ public class InteractibleGiveItem : InteractibleWithInteract
         pIGO.GetComponent<PhysicItem>().item = itemToGive;
         pIGO.name = itemToGive.name;
         given = true;
-        if (transform.GetChild(0) != null) {
-            transform.GetChild(0).gameObject.SetActive(false);
+        if (text1 != null) {
+            text1.gameObject.SetActive(false);
         }
-        if (transform.GetChild(1) != null)
+        if (text2 != null)
         {
-            transform.GetChild(1).gameObject.SetActive(true);
+            text2.gameObject.SetActive(true);
             GetComponent<Animator>().SetTrigger("traded");
         }
     }

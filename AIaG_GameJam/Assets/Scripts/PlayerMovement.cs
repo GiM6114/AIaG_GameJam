@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
+    public ParticleSystem dust;
+
     Vector2 movement;
 
     [System.NonSerialized] public bool beingTped = false;
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("player_walk"))
             {
                 animator.Play("player_walk");
+                dust.Play();
             }
         } else
         {
