@@ -38,11 +38,19 @@ public class PlayerMovement : MonoBehaviour
         }
         if (movement.x >= 0.05f)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            if (transform.localScale.x != 1f)
+            {
+                dust.Play();
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }       
         }
         else if (movement.x <= -0.05f)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            if (transform.localScale.x != -1f)
+            {
+                dust.Play();
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
         }
     }
 
