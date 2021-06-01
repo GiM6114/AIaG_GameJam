@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+    [System.NonSerialized] public bool beingTped = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,7 +46,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = movement * speed;
+        if (!beingTped)
+        {
+            rb.velocity = movement * speed;
+        }
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick"))
         {

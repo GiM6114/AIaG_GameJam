@@ -5,12 +5,23 @@ using UnityEngine.InputSystem;
 
 public class Teleport : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     [SerializeField] Animator blackScreenAnimator;
     [SerializeField] Transform otherWay;
     [SerializeField] Vector3 direction;
 
     bool startTp;
-    GameObject player;
+
+    PlayerInput pI;
+    Rigidbody2D rb;
+    PlayerMovement pM;
+
+    private void Awake()
+    {
+        pI = player.GetComponent<PlayerInput>();
+        rb = player.GetComponent<Rigidbody2D>();
+        pM = player.GetComponent<PlayerMovement>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,10 +30,8 @@ public class Teleport : MonoBehaviour
             return;
         }
 
-        player = collision.gameObject;
-        PlayerInput pI = player.GetComponent<PlayerInput>();
         pI.SwitchCurrentActionMap("Stop");
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        pM.beingTped = true;
         rb.velocity = direction * 3;
         blackScreenAnimator.SetBool("Black", true);
         StartCoroutine("Teleportation");
@@ -42,5 +51,6 @@ public class Teleport : MonoBehaviour
         otherWay.gameObject.SetActive(true);
         PlayerInput pI = player.GetComponent<PlayerInput>();
         pI.SwitchCurrentActionMap("Gameplay");
+        pM.beingTped = false;
     }
 }

@@ -10,10 +10,12 @@ public class PlayerBench : MonoBehaviour
 
     bool isBlue;
     PlayerInput pI;
+    SpriteRenderer sR;
 
     private void Awake()
     {
         bench.GetComponent<InteractibleWithInteract>().interacted += OnInteractedWithBench;
+        sR = GetComponent<SpriteRenderer>();
     }
 
     private void OnInteractedWithBench()
@@ -22,6 +24,7 @@ public class PlayerBench : MonoBehaviour
         bench.GetComponentInChildren<BoxCollider2D>().enabled = false;
         // changer sprite perso
         transform.localScale = new Vector3(-1,1,1);
+        sR.color = Color.blue;
         // le tp sur le banc
         transform.position = tpPlace.position;
     }
