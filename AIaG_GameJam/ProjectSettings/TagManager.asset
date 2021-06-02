@@ -46,3 +46,9 @@ TagManager:
   - name: Player
     uniqueID: 2394893889
     locked: 0
+  - name: SignBreak
+    uniqueID: 2339152991
+    locked: 0
+  - name: Menu
+    uniqueID: 139543077
+    locked: 0
