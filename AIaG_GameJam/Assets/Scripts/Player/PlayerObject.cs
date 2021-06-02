@@ -53,6 +53,7 @@ public class PlayerObject : MonoBehaviour
         {
             if (interactible.needItem)
             {
+                Debug.Log(interactible.name);
                 if(item.name != interactible.itemNeededName)
                 {
                     break;

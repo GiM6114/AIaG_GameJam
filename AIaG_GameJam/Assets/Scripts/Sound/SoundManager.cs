@@ -37,13 +37,17 @@ public class SoundManager : MonoBehaviour
 
     public void SwitchMusic(string to)
     {
-        Sound m1 = Array.Find(sounds, sound => sound.name == to);
-        // cas ou une demande de musique arrive mais il y a déjà la musique
-        if (m1.source.isPlaying && m1.source.volume == 1)
+        Sound m = Array.Find(sounds, sound => sound.name == to);
+        if(m == null || m.source == null)
         {
             return;
         }
-        StartCoroutine(StartFade(m1.source,2f));
+        // cas ou une demande de musique arrive mais il y a déjà la musique
+        if (m.source.isPlaying && m.source.volume == 1)
+        {
+            return;
+        }
+        StartCoroutine(StartFade(m.source,2f));
     }
 
 
