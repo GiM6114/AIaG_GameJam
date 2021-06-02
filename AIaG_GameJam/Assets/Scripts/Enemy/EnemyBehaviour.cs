@@ -17,6 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
     [NonSerialized] public Vector3 defaultPosition;
     [NonSerialized] public bool isChasing = false;
 
+    PlayerChased pC;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
             defaultPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         }
         player = GameObject.FindGameObjectWithTag("Player");
+        pC = player.GetComponent<PlayerChased>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         aiPath = GetComponent<AIPath>();
 
@@ -53,6 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if(Vector2.Distance(transform.position, player.transform.position) > distanceGiveUp)
             {
+                pC.RemoveChaser(gameObject);
                 Idle();
             }
         }
@@ -60,6 +63,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void AngerTrigger()
     {
+        pC.AddChaser(gameObject);
         StartCoroutine("Delay");
     }
 

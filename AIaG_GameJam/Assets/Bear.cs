@@ -16,9 +16,11 @@ public class Bear : MonoBehaviour
     bool isChasing = false;
     Interactible interactible;
     Rigidbody2D rb;
+    PlayerChased pC;
 
     private void Awake()
     {
+        pC = player.GetComponent<PlayerChased>();
         rb = GetComponent<Rigidbody2D>();
         aiPath = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
@@ -40,6 +42,7 @@ public class Bear : MonoBehaviour
 
     private void AngerTrigger()
     {
+        pC.AddChaser(gameObject);
         isChasing = true;
         aiPath.canSearch = true;
         aiPath.canMove = true;
@@ -49,6 +52,7 @@ public class Bear : MonoBehaviour
 
     private void Idle()
     {
+        pC.RemoveChaser(gameObject);
         transform.position = defaultPosition;
         isChasing = false;
         aiPath.canSearch = false;
