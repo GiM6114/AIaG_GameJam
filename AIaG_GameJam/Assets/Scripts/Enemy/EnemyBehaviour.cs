@@ -8,13 +8,15 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float distanceGiveUp;
+    [SerializeField] float delay;
 
-    bool isChasing = false;
     public bool instantChase;
     AIPath aiPath;
     [NonSerialized] public AIDestinationSetter destinationSetter;
     [NonSerialized] public GameObject player;
     [NonSerialized] public Vector3 defaultPosition;
+    [NonSerialized] public bool isChasing = false;
+
 
     private void Awake()
     {
@@ -58,6 +60,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void AngerTrigger()
     {
+        StartCoroutine("Delay");
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(delay);
         isChasing = true;
         aiPath.canSearch = true;
         aiPath.canMove = true;

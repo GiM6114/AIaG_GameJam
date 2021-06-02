@@ -13,7 +13,7 @@ public class PlayerObject : MonoBehaviour
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
     List<InteractibleWithInteract> interactiblesNearby = new List<InteractibleWithInteract>();
 
-    public event Action<Transform> DropBone;
+    public event Action<Transform, string> DropEvent;
     public event Action PickupBone;
 
     PlayerMovement playerMovement;
@@ -100,10 +100,7 @@ public class PlayerObject : MonoBehaviour
         itemDroppedPI.item = item;
         itemDropped.name = item.name;
 
-        if (item.name == "Bone")
-        {
-            DropBone?.Invoke(itemDropped.transform);
-        }
+        DropEvent?.Invoke(itemDropped.transform, item.name);
 
         item = null;
         sR.sprite = null;

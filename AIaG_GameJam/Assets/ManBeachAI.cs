@@ -11,28 +11,41 @@ public class ManBeachAI : MonoBehaviour
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] Item banana;
 
+    [SerializeField] GameObject text1;
+    //[SerializeField] GameObject text2;
+    [SerializeField] GameObject text3;
+
     AIPath aiPath;
     AIDestinationSetter destinationSetter;
     int state = 0;
     Transform bottle;
 
+    private void Awake()
+    {
+        aiPath = GetComponent<AIPath>();
+        destinationSetter = GetComponent<AIDestinationSetter>();
+    }
+
     public void OnPlasticBottleDropped(Transform bottle)
     {
-        pI.SwitchCurrentActionMap("Sit");
+        pI.SwitchCurrentActionMap("Stop");
         camAnim.SetBool("cinematique", true);
         destinationSetter.target = bottle;
         this.bottle = bottle;
         aiPath.canSearch = true;
         aiPath.canMove = true;
         state = 1;
+        //// TEXT ////
+        text1.SetActive(false);
+        //text2.SetActive(true);
     }
 
     private void Update()
     {
         if(state == 1 && aiPath.reachedDestination)
         {
-            Destroy(bottle);
-            GameObject ban = Instantiate(defaultPhysicItem, transform.position, Quaternion.identity);
+            Destroy(bottle.gameObject);
+            GameObject ban = Instantiate(defaultPhysicItem, transform.position + Vector3.right, Quaternion.identity);
             ban.GetComponent<PhysicItem>().item = banana;
             ban.name = "Banana";
 
@@ -41,6 +54,8 @@ public class ManBeachAI : MonoBehaviour
             aiPath.canSearch = false;
             aiPath.canMove = false;
             state = 2;
+            //text2.SetActive(false);
+            text3.SetActive(true);
         }
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlasticBottle
   m_EditorClassIdentifier: 
   name: PlasticBottle
-  sprite: {fileID: 21300000, guid: 71968bac9caa4be4fb526449ec08ee65, type: 3}
+  sprite: {fileID: 6761164967045977113, guid: 1c05a368b33c8364dbefe79277e2ea94, type: 3}
   index: 0

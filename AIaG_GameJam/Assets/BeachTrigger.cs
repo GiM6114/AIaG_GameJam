@@ -5,13 +5,38 @@ using UnityEngine;
 public class BeachTrigger : Interactible
 {
     [SerializeField] ManBeachAI mB;
+    [SerializeField] PlayerObject pO;
+
+    bool playerOnBeach = false;
+
+    private void Awake()
+    {
+        pO.DropEvent += OnBottleDropped;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "PlasticBottle")
+        if(collision.name == "Player")
         {
-            Interacted();
-            mB.OnPlasticBottleDropped(collision.transform);
+            playerOnBeach = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "Player")
+        {
+            playerOnBeach = false;
+        }
+    }
+
+    private void OnBottleDropped(Transform bottle, string itemName)
+    {
+        if (itemName != "PlasticBottle" || !playerOnBeach)
+        {
+            return;
+        }
+        Interacted();
+        mB.OnPlasticBottleDropped(bottle);
     }
 }

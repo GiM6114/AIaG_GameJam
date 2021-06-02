@@ -30,7 +30,7 @@ public class Dog : MonoBehaviour
         pO = player.GetComponent<PlayerObject>();
         pI = player.GetComponent<PlayerInput>();
 
-        pO.DropBone += OnBoneDropped;
+        pO.DropEvent += OnBoneDropped;
         pO.PickupBone += OnBonePickedUp;
         garden.interacted += OnGardenEnter;
 
@@ -102,8 +102,12 @@ public class Dog : MonoBehaviour
         camAnim.SetBool("cinematique", true);
     }
 
-    private void OnBoneDropped(Transform boneTransform)
+    private void OnBoneDropped(Transform boneTransform, string itemName)
     {
+        if(itemName != "Bone")
+        {
+            return;
+        }
         if(state == 2)
         {
             EnablePathfinding(true, 0, boneTransform);

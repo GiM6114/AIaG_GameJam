@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FishingRod
   m_EditorClassIdentifier: 
   name: FishingRod
-  sprite: {fileID: 21300000, guid: 1534cc619bd24f24fad1172b49076361, type: 3}
+  sprite: {fileID: 8132948862792318974, guid: 1c05a368b33c8364dbefe79277e2ea94, type: 3}
   index: 0
