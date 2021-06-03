@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioMixerGroup musicMixer;
     [SerializeField] AudioMixerGroup SFXMixer;
+    [SerializeField] bool doesMusic;
 
     public Sound[] sounds;
 
@@ -24,7 +25,9 @@ public class SoundManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = !s.isSFX;
+            s.source.playOnAwake = false;
         }
+        if (!doesMusic) return;
         currentMusicSource = Array.Find(sounds, sound => sound.name == "OutsideMusic").source;
         currentMusicSource.Play();
     }

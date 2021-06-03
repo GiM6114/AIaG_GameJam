@@ -10,7 +10,6 @@ public class PlayerLife : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.otherCollider.name);
         EnemyBehaviour eB = collision.gameObject.GetComponent<EnemyBehaviour>();
         if (eB != null && eB.isChasing)
         {
@@ -44,7 +43,7 @@ public class PlayerLife : MonoBehaviour
             if (eB != null) eB.Idle();
             Bear bear = c.GetComponent<Bear>();
             if (bear != null) bear.Idle();
-            //GetComponent<PlayerChased>().RemoveChaser(c);
+            GetComponent<PlayerChased>().RemoveChaser(c);
         }
         GetComponent<PlayerInput>().SwitchCurrentActionMap("Gameplay");
     }

@@ -15,6 +15,8 @@ public class WorldEngine : MonoBehaviour
     private Animator camAnim;
     private Animator camAnim2;
     private GameObject sbk;
+    SoundManager sM;
+
     private void Awake()
     {
         signs = new bool[20];
@@ -22,6 +24,7 @@ public class WorldEngine : MonoBehaviour
         camAnim2 = GameObject.Find("Main Camera").GetComponent<Animator>();
         sbk = GameObject.Find("SignBreak");
         player = GameObject.Find("Player");
+        sM = player.GetComponent<SoundManager>();
         pI = player.GetComponent<PlayerInput>();
     }
 
@@ -73,6 +76,7 @@ public class WorldEngine : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1;
         sbk.transform.GetChild(5).GetComponent<ParticleSystem>().Play();
+        sM.PlaySound("Explosion");
         camAnim2.Play("shake");
         pI.SwitchCurrentActionMap("Gameplay");
         sbk.transform.GetChild(0).gameObject.SetActive(false);

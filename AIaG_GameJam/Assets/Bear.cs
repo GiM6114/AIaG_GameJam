@@ -17,9 +17,11 @@ public class Bear : MonoBehaviour
     Interactible interactible;
     Rigidbody2D rb;
     PlayerChased pC;
+    SoundManager sM;
 
     private void Awake()
     {
+        sM = GetComponent<SoundManager>();
         pC = player.GetComponent<PlayerChased>();
         rb = GetComponent<Rigidbody2D>();
         aiPath = GetComponent<AIPath>();
@@ -42,6 +44,13 @@ public class Bear : MonoBehaviour
 
     private void AngerTrigger()
     {
+        StartCoroutine("OnAngry");
+    }
+
+    IEnumerator OnAngry()
+    {
+        yield return new WaitForSeconds(1.5f);
+        sM.PlaySound("Angry");
         pC.AddChaser(gameObject);
         isChasing = true;
         aiPath.canSearch = true;

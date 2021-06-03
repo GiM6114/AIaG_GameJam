@@ -8,8 +8,12 @@ public class TeleType2 : MonoBehaviour
     private TextMeshPro m_textMeshPro;
     private int counter;
 
+    SoundManager sM;
+
     public void Start()
     {
+        sM = GameObject.FindGameObjectWithTag("Player").GetComponent<SoundManager>();
+
         m_textMeshPro = gameObject.GetComponent<TextMeshPro>();
         counter = 0;
         m_textMeshPro.maxVisibleCharacters = 0;
@@ -27,6 +31,9 @@ public class TeleType2 : MonoBehaviour
             visibleCount = counter % (totalVisibleCharacters + 1);
 
             m_textMeshPro.maxVisibleCharacters = visibleCount;
+
+            sM.PlaySound("Text");
+
 
             counter += 1;
   

@@ -6883,15 +6883,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicMixer: {fileID: -4321027930171142507, guid: 24d6fe2bed0d7834f8ced3d7ae4b1a73, type: 2}
   SFXMixer: {fileID: 8698755660884637857, guid: 24d6fe2bed0d7834f8ced3d7ae4b1a73, type: 2}
+  doesMusic: 0
   sounds:
   - name: ButtonHighlight
-    clip: {fileID: 8300000, guid: cdb2d9de8cb214c47b41f1442b708ddc, type: 3}
+    clip: {fileID: 8300000, guid: c28af9573f7ee0a4cbdccd04f352d78c, type: 3}
     volume: 1
     pitch: 1
     isSFX: 1
     source: {fileID: 0}
   - name: ButtonPress
-    clip: {fileID: 8300000, guid: 062f3e5233fc4ab44935ae4203521fdf, type: 3}
+    clip: {fileID: 8300000, guid: 5de2f444a26e0fe46be54b7480e6e8c9, type: 3}
     volume: 1
     pitch: 1
     isSFX: 1

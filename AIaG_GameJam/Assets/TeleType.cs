@@ -10,8 +10,11 @@ public class TeleType : MonoBehaviour
     private int counter;
     private bool playerIn;
 
+    SoundManager sM;
+
     public void Start()
     {
+        sM = GameObject.FindGameObjectWithTag("Player").GetComponent<SoundManager>();
         m_textMeshPro = gameObject.GetComponent<TextMeshPro>();
         animbg = transform.GetChild(0).gameObject.GetComponent<Animator>();
         counter = 0;
@@ -37,7 +40,9 @@ public class TeleType : MonoBehaviour
             m_textMeshPro.maxVisibleCharacters = visibleCount;
 
             counter += 1;
-  
+
+            sM.PlaySound("Text");
+
             yield return new WaitForSeconds(0.04f);
         }
         
@@ -55,7 +60,7 @@ public class TeleType : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             playerIn = true;
             StopCoroutine(Dispawn());
@@ -65,7 +70,7 @@ public class TeleType : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             playerIn = false;
             counter = 0;

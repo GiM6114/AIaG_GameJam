@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.Tilemaps;
 
 public class PlayerObject : MonoBehaviour
 {
+    [SerializeField] Tilemap water;
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] SpriteRenderer sR;
     [SerializeField] Animator anim;
@@ -18,15 +20,17 @@ public class PlayerObject : MonoBehaviour
     public event Action PickupBone;
 
     PlayerMovement playerMovement;
+    SoundManager sM;
 
     private void Awake()
     {
+        sM = GetComponent<SoundManager>();
         playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed)
+        if (!ctx.performed || water.GetTile(new Vector3Int((int)transform.position.x, (int)transform.position.y, (int)transform.position.z)).name == "Water")
         {
             return;
         }
@@ -48,6 +52,8 @@ public class PlayerObject : MonoBehaviour
             {
                 PickupBone?.Invoke();
             }
+
+            sM.PlaySound("Pickup");
 
             return;
         }
