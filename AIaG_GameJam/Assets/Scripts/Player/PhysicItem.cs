@@ -8,7 +8,7 @@ public class PhysicItem : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = item.sprite;
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = item.sprite;
     }
 
     public void PickedUp()

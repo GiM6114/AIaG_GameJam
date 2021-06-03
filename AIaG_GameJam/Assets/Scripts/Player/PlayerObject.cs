@@ -8,6 +8,7 @@ public class PlayerObject : MonoBehaviour
 {
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] SpriteRenderer sR;
+    [SerializeField] Animator anim;
 
     public Item item = null;
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
@@ -41,8 +42,9 @@ public class PlayerObject : MonoBehaviour
             item = physicItem.item;
             physicItem.PickedUp();
             sR.sprite = item.sprite;
+            anim.Play("pick", - 1, 0f);
 
-            if(item.name == "Bone")
+            if (item.name == "Bone")
             {
                 PickupBone?.Invoke();
             }
@@ -97,7 +99,7 @@ public class PlayerObject : MonoBehaviour
             return;
         }
 
-        GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward, Quaternion.identity);
+        GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward+0.4f*Vector3.right*Mathf.Sign(transform.localScale.x), Quaternion.identity);
         PhysicItem itemDroppedPI = itemDropped.GetComponent<PhysicItem>();
         itemDroppedPI.item = item;
         itemDropped.name = item.name;

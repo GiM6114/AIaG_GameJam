@@ -211,6 +211,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7ab56143-5c1d-4b4e-965c-59ae902dba6c
     m_ActionName: Gameplay/Drop[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b4c43ee-f0a6-46ec-a7ea-6e72a77680f6
+    m_ActionName: Stop/Nothing
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -342,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   sR: {fileID: 5513814153476971800}
+  anim: {fileID: 1149500256103864869}
   item: {fileID: 0}
 --- !u!95 &8427503158938087249
 Animator:
@@ -1307,6 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5513814153476971783}
   - component: {fileID: 5513814153476971800}
+  - component: {fileID: 1149500256103864869}
   m_Layer: 0
   m_Name: CarryObject
   m_TagString: Untagged
@@ -1379,6 +1385,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1149500256103864869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513814153476971782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a9bc7f2f49e88e43942119751e2a127, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6048770156799499077
 GameObject:
   m_ObjectHideFlags: 0
