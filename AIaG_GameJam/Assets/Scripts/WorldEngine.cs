@@ -54,13 +54,14 @@ public class WorldEngine : MonoBehaviour
 
     IEnumerator RuleAnim(int ruleID)
     {
-        yield return new WaitForSecondsRealtime(0.6f);
+        yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 0;
         Sprite sp = Resources.Load<Sprite>("Sprites/Signs/"+ruleID.ToString());
         sbk.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
         sbk.transform.GetChild(4).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
         sbk.transform.GetChild(3).gameObject.GetComponent<TextMeshPro>().text = getFullRule(ruleID);
-        sbk.transform.localScale = new Vector3(Mathf.Sign(sbk.transform.lossyScale.x), 1, 1);
+        Debug.Log(Mathf.Sign(sbk.transform.lossyScale.x));
+        sbk.transform.localScale = new Vector3(Mathf.Sign(sbk.transform.lossyScale.x)* sbk.transform.localScale.x, 1, 1);
         pI.SwitchCurrentActionMap("Stop");
         camAnim.SetBool("cinematique", true);
         sbk.transform.GetChild(0).gameObject.SetActive(true);
