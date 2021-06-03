@@ -46,6 +46,9 @@ TagManager:
   - name: Player
     uniqueID: 2394893889
     locked: 0
+  - name: OWText
+    uniqueID: 3969441753
+    locked: 0
   - name: SignBreak
     uniqueID: 2339152991
     locked: 0

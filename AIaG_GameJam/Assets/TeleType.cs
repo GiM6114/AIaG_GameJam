@@ -13,7 +13,7 @@ public class TeleType : MonoBehaviour
     public void Start()
     {
         m_textMeshPro = gameObject.GetComponent<TextMeshPro>();
-        animbg = gameObject.GetComponentInChildren<Animator>();
+        animbg = transform.GetChild(0).gameObject.GetComponent<Animator>();
         counter = 0;
         m_textMeshPro.maxVisibleCharacters = 0;
         playerIn = false;
@@ -21,6 +21,7 @@ public class TeleType : MonoBehaviour
     }
     IEnumerator Write()
     {
+        GetComponent<Animator>().Play("spawn", -1, 0f);
         transform.GetChild(0).gameObject.SetActive(true);
         animbg.Play("show");
         yield return new WaitForSeconds(0.1f);
@@ -39,6 +40,7 @@ public class TeleType : MonoBehaviour
   
             yield return new WaitForSeconds(0.04f);
         }
+        
     }
 
     IEnumerator Dispawn()

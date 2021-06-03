@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -325525543
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 5272910417226227026}
   - component: {fileID: 5272910417226227024}
   - component: {fileID: 5272910417226227025}
+  - component: {fileID: 396599322929124065}
   m_Layer: 0
   m_Name: OverworldText
   m_TagString: Untagged
@@ -179,8 +180,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -325525543
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5272910417226227026
@@ -272,7 +273,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5272910417226227027}
   m_maskType: 0
-  _SortingLayerID: 0
+  _SortingLayerID: -325525543
   _SortingOrder: 0
 --- !u!114 &5272910417226227024
 MonoBehaviour:
@@ -302,3 +303,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1.6}
   serializedVersion: 2
   m_Radius: 1.25
+--- !u!95 &396599322929124065
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230433732379340358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10d0b1e976b4bed46aa4fa27b5a9f00f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
