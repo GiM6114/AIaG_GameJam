@@ -30,7 +30,7 @@ public class PlayerObject : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed || water.GetTile(new Vector3Int((int)transform.position.x, (int)transform.position.y, (int)transform.position.z)).name == "Water")
+        if (!ctx.performed || water.GetTile(water.WorldToCell(transform.position)) != null)
         {
             return;
         }
