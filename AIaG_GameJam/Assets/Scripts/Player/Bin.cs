@@ -23,7 +23,7 @@ public class Bin : InteractibleGiveItem
         {
             Instantiate(racoon, transform.position + Vector3.left, Quaternion.identity);
             EnemyBehaviour eB = racoon.GetComponent<EnemyBehaviour>();
-            eB.defaultPosition = new Vector3(0,0,10);
+            eB.killWhenDone = true;
             racoonSpawned = true;
         }
     }

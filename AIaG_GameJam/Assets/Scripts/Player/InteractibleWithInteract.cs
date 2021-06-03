@@ -26,6 +26,8 @@ public class InteractibleWithInteract : Interactible
                 return;
             }
             Instantiate(spawnEnraged, transform.position + new Vector3(0,0,-0.2f), Quaternion.identity);
+            EnemyBehaviour eB = spawnEnraged.GetComponent<EnemyBehaviour>();
+            eB.killWhenDone = true;
         }
     }
 }

@@ -16,6 +16,7 @@ public class EnemyBehaviour : MonoBehaviour
     [NonSerialized] public GameObject player;
     [NonSerialized] public Vector3 defaultPosition;
     [NonSerialized] public bool isChasing = false;
+    [NonSerialized] public bool killWhenDone = false;
 
     PlayerChased pC;
 
@@ -77,6 +78,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Idle()
     {
+        if (killWhenDone)
+        {
+            Destroy(gameObject);
+        }
         transform.localPosition = defaultPosition;
         isChasing = false;
         aiPath.canSearch = false;
