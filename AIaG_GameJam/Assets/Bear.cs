@@ -13,7 +13,7 @@ public class Bear : MonoBehaviour
     [NonSerialized] public AIDestinationSetter destinationSetter;
 
     AIPath aiPath;
-    bool isChasing = false;
+    [NonSerialized] public bool isChasing = false;
     Interactible interactible;
     Rigidbody2D rb;
     PlayerChased pC;
@@ -50,13 +50,13 @@ public class Bear : MonoBehaviour
         rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
     }
 
-    private void Idle()
+    public void Idle()
     {
         pC.RemoveChaser(gameObject);
         transform.position = defaultPosition;
         isChasing = false;
         aiPath.canSearch = false;
         aiPath.canMove = false;
-        rb.constraints &= RigidbodyConstraints2D.FreezeAll;
+        rb.constraints |= RigidbodyConstraints2D.FreezeAll;
     }
 }

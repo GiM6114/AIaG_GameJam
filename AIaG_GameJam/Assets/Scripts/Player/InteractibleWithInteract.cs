@@ -19,6 +19,7 @@ public class InteractibleWithInteract : Interactible
         numberOfTimes++;
         if(numberOfTimesNeeded == numberOfTimes)
         {
+            numberOfTimes = 0;
             Interacted();
             if (spawnEnraged == null)
             {

@@ -30,6 +30,8 @@ public class PlayerObject : MonoBehaviour
             return;
         }
 
+        if (playerMovement.animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick")) return;
+
         // récup objet proche si il y en a un
         if (itemsNearby.Count > 0)
         {
@@ -53,8 +55,7 @@ public class PlayerObject : MonoBehaviour
         {
             if (interactible.needItem)
             {
-                Debug.Log(interactible.name);
-                if(item.name != interactible.itemNeededName)
+                if(item == null || item.name != interactible.itemNeededName)
                 {
                     break;
                 }

@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
 
     Rigidbody2D rb;
-    Animator animator;
+    [System.NonSerialized] public Animator animator;
 
     public ParticleSystem dust;
 

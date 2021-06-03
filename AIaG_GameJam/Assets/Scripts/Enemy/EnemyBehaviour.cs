@@ -75,7 +75,7 @@ public class EnemyBehaviour : MonoBehaviour
         aiPath.canMove = true;
     }
 
-    private void Idle()
+    public void Idle()
     {
         transform.localPosition = defaultPosition;
         isChasing = false;

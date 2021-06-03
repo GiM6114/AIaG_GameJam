@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerChased : MonoBehaviour
 {
     [SerializeField] SoundManager sM;
-    List<GameObject> chasers = new List<GameObject>();
+    [System.NonSerialized] public List<GameObject> chasers = new List<GameObject>();
 
     public void AddChaser(GameObject chaser)
     {
