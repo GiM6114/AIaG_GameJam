@@ -90181,7 +90181,7 @@ PrefabInstance:
     - target: {fileID: 5513814152390704902, guid: 24fb99052ffed4243a4d7d9cf4f20de8, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 6b6d5085252d89748bbcf0df64931300, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5513814152390704902, guid: 24fb99052ffed4243a4d7d9cf4f20de8, type: 3}
       propertyPath: baton
       value: 
@@ -97433,7 +97433,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1287678745063673449, guid: fb4131c055de97a4caa82dbe481dd70e, type: 3}
   m_PrefabInstance: {fileID: 1287678746453613416}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1663397168
+--- !u!212 &1663397172
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
