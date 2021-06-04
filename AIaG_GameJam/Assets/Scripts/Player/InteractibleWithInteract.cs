@@ -13,7 +13,6 @@ public class InteractibleWithInteract : Interactible
     public int numberOfTimesNeeded = 1;
     int numberOfTimes = 0;
 
-
     public virtual void OnInteraction()
     {
         numberOfTimes++;

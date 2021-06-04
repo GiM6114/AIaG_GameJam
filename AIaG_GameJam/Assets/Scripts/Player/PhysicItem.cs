@@ -5,6 +5,7 @@ using UnityEngine;
 public class PhysicItem : MonoBehaviour
 {
     [SerializeField] public Item item;
+    [System.NonSerialized] public bool canBePickedUp = true;
 
     private void Start()
     {

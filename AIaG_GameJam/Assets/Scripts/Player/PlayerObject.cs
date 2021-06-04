@@ -38,24 +38,32 @@ public class PlayerObject : MonoBehaviour
         if (playerMovement.animator.GetCurrentAnimatorStateInfo(0).IsName("player_kick")) return;
 
         // récup objet proche si il y en a un
+
         if (itemsNearby.Count > 0)
         {
-            Drop();
-
-            PhysicItem physicItem = itemsNearby[0].GetComponent<PhysicItem>();
-            item = physicItem.item;
-            physicItem.PickedUp();
-            sR.sprite = item.sprite;
-            anim.Play("pick", - 1, 0f);
-
-            if (item.name == "Bone")
+            foreach (var i in itemsNearby)
             {
-                PickupBone?.Invoke();
+                Drop();
+                PhysicItem physicItem = itemsNearby[0].GetComponent<PhysicItem>();
+                if (!physicItem.canBePickedUp)
+                {
+                    continue;
+                }
+                item = physicItem.item;
+                physicItem.PickedUp();
+                sR.sprite = item.sprite;
+                anim.Play("pick", -1, 0f);
+
+                if (item.name == "Bone")
+                {
+                    PickupBone?.Invoke();
+                }
+
+                sM.PlaySound("Pickup");
+
+                return;
             }
 
-            sM.PlaySound("Pickup");
-
-            return;
         }
 
         // cas ou pas d'obj proche
@@ -74,7 +82,7 @@ public class PlayerObject : MonoBehaviour
             }
             // on est sorti si besoin d'item et pas le bon item
 
-            playerMovement.InteractionRequest(item.name);
+            if(interactible.needItem) playerMovement.InteractionRequest(item.name);
             interactible.OnInteraction();
             if (interactible.itemDestructionAfterUse)
             {
