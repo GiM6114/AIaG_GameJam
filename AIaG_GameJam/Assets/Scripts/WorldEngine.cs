@@ -42,11 +42,28 @@ public class WorldEngine : MonoBehaviour
         }
     }
 
+    private int count(bool[] array, bool flag)
+    {
+        int value = 0;
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == flag) value++;
+        }
+
+        return value;
+    }
+
     public void BreakRuleSign(int idRule)
     {
         _i.signs[idRule] = true;
         GameObject.Find("Canvas").GetComponent<SignMenu>().ActivateSign(idRule);
         StartCoroutine(RuleAnim(idRule));
+        Debug.Log(count(_i.signs, true));
+        if (count(_i.signs, true) == 20)
+        {
+            
+        }
     }
 
     public bool HasRuleBeenBroke(int idRule)
@@ -95,6 +112,8 @@ public class WorldEngine : MonoBehaviour
         {
             case 0:
                 return "DO NOT WALK ON THE GRASS";
+            case 3:
+                return "DO NOT FISH HERE";
             case 5:
                 return "DO NOT WALK YOUR DOG HERE";
             case 6:
