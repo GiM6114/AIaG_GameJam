@@ -7,6 +7,7 @@ public class InteractibleGiveItem : InteractibleWithInteract
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] Item itemToGive;
     [SerializeField] Vector3 placeToPutObject;
+    [SerializeField] float delay = 0;
 
     [System.NonSerialized] public bool given = false;
 
@@ -20,9 +21,7 @@ public class InteractibleGiveItem : InteractibleWithInteract
             return;
         }
         base.OnInteraction();
-        GameObject pIGO = Instantiate(defaultPhysicItem, transform.position + placeToPutObject, Quaternion.identity);
-        pIGO.GetComponent<PhysicItem>().item = itemToGive;
-        pIGO.name = itemToGive.name;
+        StartCoroutine("Delay");
         given = true;
         if (text1 != null) {
             text1.gameObject.SetActive(false);
@@ -32,5 +31,13 @@ public class InteractibleGiveItem : InteractibleWithInteract
             text2.gameObject.SetActive(true);
             GetComponent<Animator>().SetTrigger("traded");
         }
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(delay);
+        GameObject pIGO = Instantiate(defaultPhysicItem, transform.position + placeToPutObject, Quaternion.identity);
+        pIGO.GetComponent<PhysicItem>().item = itemToGive;
+        pIGO.name = itemToGive.name;
     }
 }

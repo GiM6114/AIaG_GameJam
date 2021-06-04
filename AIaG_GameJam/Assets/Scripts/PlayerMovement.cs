@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     float countdown = 0;
     [SerializeField] float repeatSoundWalking;
     SoundManager sM;
+    PlayerInput pI;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         countdown = repeatSoundWalking;
+        pI = GetComponent<PlayerInput>();
     }
         
     public void Move(InputAction.CallbackContext ctx)
@@ -69,6 +71,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_smoke") || animator.GetCurrentAnimatorStateInfo(0).IsName("player_fish"))
+        {
+            return;
+        }
         TileBase t = water.GetTile(water.WorldToCell(transform.position));
         if((previousTile == null && t != null) || (previousTile != null && t == null))
         {
@@ -133,5 +139,23 @@ public class PlayerMovement : MonoBehaviour
             animator.Play("player_kick");
             sM.PlaySound("Kick");
         }
+    }
+
+    public void InteractionRequest(string itemName)
+    {
+        if(itemName != "Cigaret" && itemName != "FishingRod")
+        {
+            return;
+        }
+        rb.velocity = Vector2.zero;
+        pI.SwitchCurrentActionMap("Stop");
+        animator.Play(itemName == "Cigaret" ? "player_smoke" : "player_fish");
+        StartCoroutine("Wait");
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        pI.SwitchCurrentActionMap("Gameplay");
     }
 }

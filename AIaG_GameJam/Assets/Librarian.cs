@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Librarian : MonoBehaviour
 {
-    [SerializeField] InteractibleWithArea iWA;
+    [SerializeField] InteractibleWithInteract iWA;
     [SerializeField] GameObject text1;
     [SerializeField] GameObject text2;
     EnemyBehaviour eB;

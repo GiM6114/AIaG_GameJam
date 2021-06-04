@@ -74,7 +74,7 @@ public class PlayerObject : MonoBehaviour
             }
             // on est sorti si besoin d'item et pas le bon item
 
-
+            playerMovement.InteractionRequest(item.name);
             interactible.OnInteraction();
             if (interactible.itemDestructionAfterUse)
             {

@@ -20,6 +20,63 @@ TextureImporter:
   - first:
       213: -7255084596435560682
     second: gamejam_character_animations_5
+  - first:
+      213: -2965378133413101459
+    second: gamejam_character_animations_6
+  - first:
+      213: 6419088727208664274
+    second: gamejam_character_animations_7
+  - first:
+      213: -3683870822044822995
+    second: gamejam_character_animations_8
+  - first:
+      213: -1991906275098084628
+    second: gamejam_character_animations_9
+  - first:
+      213: -4409724751406770430
+    second: gamejam_character_animations_10
+  - first:
+      213: 8497243933552087124
+    second: gamejam_character_animations_11
+  - first:
+      213: -6285133686418460109
+    second: gamejam_character_animations_12
+  - first:
+      213: -8387028298631303758
+    second: gamejam_character_animations_13
+  - first:
+      213: 835610294173464667
+    second: gamejam_character_animations_14
+  - first:
+      213: 4149958757769877094
+    second: gamejam_character_animations_15
+  - first:
+      213: -5287547218841542001
+    second: gamejam_character_animations_16
+  - first:
+      213: 1881436961359736736
+    second: gamejam_character_animations_17
+  - first:
+      213: -4015917904512093895
+    second: gamejam_character_animations_18
+  - first:
+      213: 5834448737148450412
+    second: gamejam_character_animations_19
+  - first:
+      213: -7866075884244366245
+    second: gamejam_character_animations_20
+  - first:
+      213: 2693473207774881460
+    second: gamejam_character_animations_21
+  - first:
+      213: 7317348653004896022
+    second: gamejam_character_animations_22
+  - first:
+      213: -2122866270956737677
+    second: gamejam_character_animations_23
+  - first:
+      213: -2616159870206802802
+    second: gamejam_character_animations_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +174,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +195,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,7 +216,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,7 +237,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,7 +258,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,7 +279,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,6 +287,405 @@ TextureImporter:
       bones: []
       spriteID: 617dc06aff2c05b90800000000000000
       internalID: -7255084596435560682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6083358c4cd8d6d0800000000000000
+      internalID: -2965378133413101459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc9cf6003f251950800000000000000
+      internalID: 6419088727208664274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22979d510340ecc0800000000000000
+      internalID: -3683870822044822995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_9
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea38eedbc35b54e0800000000000000
+      internalID: -1991906275098084628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207d62bc3b28dc2c0800000000000000
+      internalID: -4409724751406770430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450173556564ce570800000000000000
+      internalID: 8497243933552087124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332bf275638b6c8a0800000000000000
+      internalID: -6285133686418460109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_13
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdaee2e23a4b9b80800000000000000
+      internalID: -8387028298631303758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 31
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b587ed2a22fa89b00800000000000000
+      internalID: 835610294173464667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_15
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 31
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6661565b08d979930800000000000000
+      internalID: 4149958757769877094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_16
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 31
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8268dfa1dbde96b0800000000000000
+      internalID: -5287547218841542001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 31
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af2325b2f43c1a10800000000000000
+      internalID: 1881436961359736736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931fc6e61f79448c0800000000000000
+      internalID: -4015917904512093895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66b5f5d63028f050800000000000000
+      internalID: 5834448737148450412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_20
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 45
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c0957d8a516d290800000000000000
+      internalID: -7866075884244366245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_21
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 46
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b62471ac93216520800000000000000
+      internalID: 2693473207774881460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_22
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1
+        width: 38
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6173a08b4d17c8560800000000000000
+      internalID: 7317348653004896022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b27fdbf501a82e0800000000000000
+      internalID: -2122866270956737677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_character_animations_24
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8401b4857881bbd0800000000000000
+      internalID: -2616159870206802802
       vertices: []
       indices: 
       edges: []

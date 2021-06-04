@@ -5,8 +5,9 @@ using UnityEngine;
 public class SetZoneTrigger : MonoBehaviour
 {
     [SerializeField] List<EnemyBehaviour> enemyBehaviours;
+    [SerializeField] Crab crab;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -14,6 +15,7 @@ public class SetZoneTrigger : MonoBehaviour
             {
                 eB.AngerTrigger();
             }
+            crab.chasing = true;
         }
     }
 }
