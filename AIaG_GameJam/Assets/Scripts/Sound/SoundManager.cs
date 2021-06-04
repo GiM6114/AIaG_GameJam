@@ -28,7 +28,7 @@ public class SoundManager : MonoBehaviour
             s.source.playOnAwake = false;
         }
         if (!doesMusic) return;
-        currentMusicSource = Array.Find(sounds, sound => sound.name == "OutsideMusic").source;
+        currentMusicSource = Array.Find(sounds, sound => sound.name == "InDoorMusic").source;
         currentMusicSource.Play();
     }
 

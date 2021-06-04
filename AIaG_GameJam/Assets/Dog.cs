@@ -95,6 +95,13 @@ public class Dog : MonoBehaviour
         {
             return;
         }
+        StartCoroutine("Delay");
+
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(2f);
         hasDiscoveredStick = true;
         state = 4;
         EnablePathfinding(true, 1, bushWithStick.transform);

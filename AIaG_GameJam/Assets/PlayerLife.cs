@@ -7,7 +7,14 @@ public class PlayerLife : MonoBehaviour
 {
     [SerializeField] Animator cinematique;
     [SerializeField] Transform spawnPoint;
-    
+
+    SoundManager sM;
+
+    private void Awake()
+    {
+        sM = GameObject.Find("Canvas").GetComponent<SoundManager>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyBehaviour eB = collision.gameObject.GetComponent<EnemyBehaviour>();
@@ -29,6 +36,7 @@ public class PlayerLife : MonoBehaviour
         // drop
         GetComponent<PlayerObject>().Drop();
         GetComponent<PlayerInput>().SwitchCurrentActionMap("Stop");
+        sM.SwitchMusic("InDoorMusic");
         StartCoroutine("DeathCoroutine");
     }
 

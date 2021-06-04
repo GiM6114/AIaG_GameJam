@@ -28,6 +28,12 @@ public class ManBeachAI : MonoBehaviour
 
     public void OnPlasticBottleDropped(Transform bottle)
     {
+        StartCoroutine(Delay(bottle));
+    }
+
+    IEnumerator Delay(Transform bottle)
+    {
+        yield return new WaitForSeconds(3f);
         pI.SwitchCurrentActionMap("Stop");
         camAnim.SetBool("cinematique", true);
         destinationSetter.target = bottle;
