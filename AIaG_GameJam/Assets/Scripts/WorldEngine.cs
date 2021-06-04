@@ -62,7 +62,7 @@ public class WorldEngine : MonoBehaviour
         GameObject.Find("Canvas").GetComponent<SignMenu>().ActivateSign(idRule);
         StartCoroutine(RuleAnim(idRule));
         Debug.Log(count(_i.signs, true));
-        if (count(_i.signs, true) == 1)
+        if (count(_i.signs, true) == 20)
         {
             StartCoroutine(MaxiWin(idRule));
         }

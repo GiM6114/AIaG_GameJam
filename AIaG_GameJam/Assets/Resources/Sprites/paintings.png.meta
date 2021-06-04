@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 967ca237d2ce31a4a897d1ced7bbdccf
+guid: c056fa96050496d49982ffca90caba15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2224024403869289055
-    second: gamejam_grids_0
+      213: 1530350177971939696
+    second: paintings_0
   - first:
-      213: 2901308039740174106
-    second: gamejam_grids_1
+      213: -3027290110533211810
+    second: paintings_1
   - first:
-      213: -3394494648170292047
-    second: gamejam_grids_2
+      213: -2638268231637340411
+    second: paintings_2
   - first:
-      213: 6383480190511720226
-    second: gamejam_grids_3
+      213: 5080188722767616967
+    second: paintings_3
   - first:
-      213: 5144183814113629215
-    second: gamejam_grids_4
+      213: 8240431159806286766
+    second: paintings_4
   - first:
-      213: 3085855178652149448
-    second: gamejam_grids_5
-  - first:
-      213: -1437899757130348746
-    second: gamejam_grids_6
-  - first:
-      213: 6635645650803575390
-    second: gamejam_grids_7
-  - first:
-      213: -764038672252936212
-    second: gamejam_grids_8
+      213: -7006259930117579653
+    second: paintings_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,185 +105,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gamejam_grids_0
+      name: paintings_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 129
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a5329b869da221e0800000000000000
-      internalID: -2224024403869289055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 135
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1fa2b45a44834820800000000000000
-      internalID: 2901308039740174106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 98
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bc58df2a1554e0d0800000000000000
-      internalID: -3394494648170292047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_3
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 132
-        width: 54
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 227a132896da69850800000000000000
-      internalID: 6383480190511720226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 64
-        width: 21
+        y: 0
+        width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f149e838cefc36740800000000000000
-      internalID: 5144183814113629215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_5
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 64
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c66cd77fe823da20800000000000000
-      internalID: 3085855178652149448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_6
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 198
-        width: 50
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63700a90acd8b0ce0800000000000000
-      internalID: -1437899757130348746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_7
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 64
-        width: 20
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5a438fef8c861c50800000000000000
-      internalID: 6635645650803575390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_8
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 18
-        width: 38
-        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,8 +135,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cefd3b920e69565f0800000000000000
-      internalID: -764038672252936212
+      spriteID: 07929f3f065ec3510800000000000000
+      internalID: 1530350177971939696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e596d990fa7ecf5d0800000000000000
+      internalID: -3027290110533211810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fee0f750df26bd0800000000000000
+      internalID: -2638268231637340411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb52843ab4708640800000000000000
+      internalID: 5080188722767616967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab505cea74eb5270800000000000000
+      internalID: 8240431159806286766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paintings_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cd94dd6b3c4ce90800000000000000
+      internalID: -7006259930117579653
       vertices: []
       indices: 
       edges: []
@@ -309,7 +249,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 774f58746212be741b0b68809361851d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
