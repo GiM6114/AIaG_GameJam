@@ -37,6 +37,7 @@ public class PlayerLife : MonoBehaviour
         yield return new WaitForSeconds(2);
         cinematique.SetBool("Black", false);
         transform.position = spawnPoint.position;
+        GetComponent<PlayerInput>().SwitchCurrentActionMap("Gameplay");
         foreach (var c in GetComponent<PlayerChased>().chasers)
         {
             EnemyBehaviour eB = c.GetComponent<EnemyBehaviour>();
@@ -45,6 +46,5 @@ public class PlayerLife : MonoBehaviour
             if (bear != null) bear.Idle();
             GetComponent<PlayerChased>().RemoveChaser(c);
         }
-        GetComponent<PlayerInput>().SwitchCurrentActionMap("Gameplay");
     }
 }

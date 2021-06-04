@@ -100,7 +100,7 @@ public class PlayerObject : MonoBehaviour
 
     public void Drop()
     {
-        if (item == null)
+        if (item == null || water.GetTile(water.WorldToCell(transform.position)) != null)
         {
             return;
         }
