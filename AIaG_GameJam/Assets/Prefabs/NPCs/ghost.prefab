@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &110795212556715279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294271907673009807}
+  - component: {fileID: 2124725337321672237}
+  m_Layer: 0
+  m_Name: htibox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294271907673009807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110795212556715279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5493960234416478947}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2124725337321672237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110795212556715279}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004574299, y: 0.03887844}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7804518, y: 0.7850256}
+  m_EdgeRadius: 0
 --- !u!1 &478467321822559885
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +90,7 @@ Transform:
   m_Children:
   - {fileID: 6306045869200296531}
   - {fileID: 6822974555588550847}
+  - {fileID: 1294271907673009807}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,12 +159,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLaw: 0
   lawIndex: -1
+  spawnEnraged: {fileID: 0}
   needItem: 1
   itemNeededName: Flower
   itemDestructionAfterUse: 1
+  numberOfTimesNeeded: 1
   defaultPhysicItem: {fileID: 2884754982403754244, guid: 3274ba42daa22364f9fb858d5a5d1d41, type: 3}
   itemToGive: {fileID: 11400000, guid: 02886c582e4b19c4d9b34c56912d4f38, type: 2}
   placeToPutObject: {x: 0, y: -1, z: 0}
+  delay: 0
+  text1: {fileID: 0}
+  text2: {fileID: 0}
 --- !u!58 &7856463175756673076
 CircleCollider2D:
   m_ObjectHideFlags: 0

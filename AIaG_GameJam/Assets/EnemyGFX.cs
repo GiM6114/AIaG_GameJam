@@ -48,7 +48,7 @@ public class EnemyGFX : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
 
-        if (Mathf.Abs(aiPath.velocity.magnitude) >= 0.05f)
+        if (Mathf.Abs(aiPath.velocity.magnitude) > 0f)
         {
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName("chase"))
             {

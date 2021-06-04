@@ -112,14 +112,26 @@ public class WorldEngine : MonoBehaviour
         {
             case 0:
                 return "DO NOT WALK ON THE GRASS";
+            case 1:
+                return "DO NOT DIG IN THE TRASH";
+            case 2:
+                return "DO NOT ENTER";
             case 3:
                 return "DO NOT FISH HERE";
+            case 4:
+                return "DO NOT PICK UP THE FLOWERS";
             case 5:
                 return "DO NOT WALK YOUR DOG HERE";
             case 6:
                 return "DO NOT TOUCH THE BEAR";
+            case 7:
+                return "DO NOT TRESPASS";
             case 8:
                 return "WET PAINT DO NOT SIT";
+            case 9:
+                return "DO NOT VANDALIZE THE STATUE";
+            case 10:
+                return "OUT OF ORDER DO NOT USE";
             case 11:
                 return "DO NOT LITTER";
             case 12:

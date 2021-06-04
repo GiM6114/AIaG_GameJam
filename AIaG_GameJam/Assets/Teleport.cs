@@ -48,7 +48,7 @@ public class Teleport : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         otherWay.gameObject.SetActive(false);
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        player.transform.position = otherWay.localPosition;
+        player.transform.position = otherWay.position;
         rb.velocity = direction * 3;
         blackScreenAnimator.SetBool("Black", false);
 
