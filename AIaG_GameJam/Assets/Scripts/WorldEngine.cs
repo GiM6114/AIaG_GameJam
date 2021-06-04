@@ -95,12 +95,24 @@ public class WorldEngine : MonoBehaviour
         {
             case 0:
                 return "DO NOT WALK ON THE GRASS";
-                break;
+            case 5:
+                return "DO NOT WALK YOUR DOG HERE";
+            case 6:
+                return "DO NOT TOUCH THE BEAR";
             case 8:
-                return "DO NOT SIT HERE, WET PAINT";
-                break;
+                return "WET PAINT DO NOT SIT";
+            case 11:
+                return "DO NOT LITTER";
+            case 12:
+                return "DO NOT FEED THE ANIMALS";
+            case 14:
+                return "DO NOT SWIM HERE";
+            case 15:
+                return "DO NOT DISTURB";
+            case 19:
+                return "PLEASE WAIT IN LINE";
         }
-        return "DO NOT WALK ON THE GRASS";
+        return "THIS IS A BUG YOURE NOT SUPPOSED TO SEE THIS";
     }
 
 }

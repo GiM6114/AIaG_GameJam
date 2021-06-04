@@ -13,7 +13,7 @@ public class SignMenu : MonoBehaviour
         foreach(Image image in signs)
         {
             image.sprite = Resources.Load<Sprite>("Sprites/Signs/" + i.ToString());
-            image.color = Color.black;
+            image.color = new Color(0, 0, 0, 0.7f);
             i++;
         }
     }
