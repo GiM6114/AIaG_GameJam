@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bell
   m_EditorClassIdentifier: 
   name: Bell
-  sprite: {fileID: 0}
+  sprite: {fileID: 3378796013926615076, guid: 47da2465807df144db1b79c1fa31f4a3, type: 3}
   index: 0

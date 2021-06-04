@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shears
   m_EditorClassIdentifier: 
   name: Shears
-  sprite: {fileID: 21300000, guid: 7595f4f37fc624a4f9acea19690cd0d2, type: 3}
+  sprite: {fileID: 4882354895914332309, guid: 47da2465807df144db1b79c1fa31f4a3, type: 3}
   index: 0

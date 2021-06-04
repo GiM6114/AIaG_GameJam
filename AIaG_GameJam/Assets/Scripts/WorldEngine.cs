@@ -16,6 +16,7 @@ public class WorldEngine : MonoBehaviour
     private Animator camAnim2;
     private GameObject sbk;
     SoundManager sM;
+    SignMenu signMenu;
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class WorldEngine : MonoBehaviour
     public void BreakRuleSign(int idRule)
     {
         _i.signs[idRule] = true;
+        GameObject.Find("Canvas").GetComponent<SignMenu>().ActivateSign(idRule);
         StartCoroutine(RuleAnim(idRule));
     }
 
