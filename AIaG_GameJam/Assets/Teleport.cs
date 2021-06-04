@@ -16,8 +16,14 @@ public class Teleport : MonoBehaviour
     Rigidbody2D rb;
     PlayerMovement pM;
 
+    SoundManager sM;
+    bool isIn;
+
     private void Awake()
     {
+        sM = GameObject.Find("Canvas").GetComponent<SoundManager>();
+        isIn = name == "In";
+
         pI = player.GetComponent<PlayerInput>();
         rb = player.GetComponent<Rigidbody2D>();
         pM = player.GetComponent<PlayerMovement>();
@@ -45,6 +51,9 @@ public class Teleport : MonoBehaviour
         player.transform.position = otherWay.localPosition;
         rb.velocity = direction * 3;
         blackScreenAnimator.SetBool("Black", false);
+
+        sM.SwitchMusic(isIn ? "OutsideMusic" : "InDoorMusic");
+
         yield return new WaitForSeconds(0.7f);
         rb.velocity = Vector3.zero;
         yield return new WaitForSeconds(0.1f);
