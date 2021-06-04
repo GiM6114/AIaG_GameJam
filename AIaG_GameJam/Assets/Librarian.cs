@@ -5,6 +5,7 @@ using UnityEngine;
 public class Librarian : MonoBehaviour
 {
     [SerializeField] InteractibleWithInteract iWA;
+    [SerializeField] InteractibleWithInteract iWA2;
     [SerializeField] GameObject text1;
     [SerializeField] GameObject text2;
     EnemyBehaviour eB;
@@ -14,6 +15,9 @@ public class Librarian : MonoBehaviour
         eB = GetComponent<EnemyBehaviour>();
         iWA.interacted += eB.AngerTrigger;
         iWA.interacted += Angered;
+        iWA2.interacted += eB.AngerTrigger;
+        iWA2.interacted += Angered;
+        iWA2.interacted += BellSound;
     }
 
     private void Update()
@@ -29,5 +33,10 @@ public class Librarian : MonoBehaviour
     {
         text1.SetActive(false);
         text2.SetActive(true);
+    }
+
+    private void BellSound()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<SoundManager>().PlaySound("Bell");
     }
 }

@@ -11,6 +11,7 @@ public class Crab : MonoBehaviour
     GameObject player;
     [System.NonSerialized] public bool chasing = false;
     bool astar = false;
+    [SerializeField] SpriteRenderer sR;
 
     private void Awake()
     {
@@ -20,6 +21,14 @@ public class Crab : MonoBehaviour
 
     private void Update()
     {
+        if(ground.GetTile(ground.WorldToCell(transform.position)) != null)
+        {
+            sR.enabled = true;
+        }
+        else
+        {
+            sR.enabled = false;
+        }
         if(astar == true || chasing == false)
         {
             return;
@@ -30,7 +39,6 @@ public class Crab : MonoBehaviour
 
         if(ground.GetTile(ground.WorldToCell(transform.position)) != null)
         {
-            Debug.Log("oui");
             astar = true;
             eB.AngerTrigger();
         }

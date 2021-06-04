@@ -7,6 +7,10 @@ using UnityEngine.Tilemaps;
 
 public class PlayerObject : MonoBehaviour
 {
+    [SerializeField] Transform normalItem;
+    [SerializeField] Transform baton;
+    [SerializeField] GameObject child;
+    [Space]
     [SerializeField] Tilemap water;
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] SpriteRenderer sR;
@@ -61,6 +65,15 @@ public class PlayerObject : MonoBehaviour
 
                 sM.PlaySound("Pickup");
 
+                if(item.name == "Stick")
+                {
+                    child.transform.localPosition = baton.localPosition;
+                }
+                else
+                {
+                    child.transform.localPosition = normalItem.localPosition;
+                }
+
                 return;
             }
 
@@ -73,7 +86,7 @@ public class PlayerObject : MonoBehaviour
             {
                 if(item == null || item.name != interactible.itemNeededName)
                 {
-                    break;
+                    continue;
                 }
             }
             else
