@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 967ca237d2ce31a4a897d1ced7bbdccf
+guid: c3007bc5fca4bb7478298fd99b6b8e9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2224024403869289055
-    second: gamejam_grids_0
+      213: 5350192399540538477
+    second: gamejam_crab_0
   - first:
-      213: 2901308039740174106
-    second: gamejam_grids_1
+      213: 6245356833863084112
+    second: gamejam_crab_1
   - first:
-      213: -3394494648170292047
-    second: gamejam_grids_2
+      213: -5295597160095893912
+    second: gamejam_crab_2
   - first:
-      213: 6383480190511720226
-    second: gamejam_grids_3
+      213: 6373955035127247826
+    second: gamejam_crab_3
   - first:
-      213: 5144183814113629215
-    second: gamejam_grids_4
+      213: -1750069706353822545
+    second: gamejam_crab_4
   - first:
-      213: 3085855178652149448
-    second: gamejam_grids_5
+      213: 3551461019395833500
+    second: gamejam_crab_5
   - first:
-      213: -1437899757130348746
-    second: gamejam_grids_6
-  - first:
-      213: 6635645650803575390
-    second: gamejam_grids_7
+      213: -4543312911400560360
+    second: gamejam_crab_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,164 +108,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gamejam_grids_0
+      name: gamejam_crab_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 129
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a5329b869da221e0800000000000000
-      internalID: -2224024403869289055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 135
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1fa2b45a44834820800000000000000
-      internalID: 2901308039740174106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 98
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bc58df2a1554e0d0800000000000000
-      internalID: -3394494648170292047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_3
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 132
-        width: 54
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 227a132896da69850800000000000000
-      internalID: 6383480190511720226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 64
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f149e838cefc36740800000000000000
-      internalID: 5144183814113629215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_5
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 64
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c66cd77fe823da20800000000000000
-      internalID: 3085855178652149448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_6
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 198
-        width: 50
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63700a90acd8b0ce0800000000000000
-      internalID: -1437899757130348746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_7
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 64
-        width: 20
-        height: 32
+        y: 0
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +138,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a438fef8c861c50800000000000000
-      internalID: 6635645650803575390
+      spriteID: d6ccb9e04a3bf3a40800000000000000
+      internalID: 5350192399540538477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058a7f973f6fba650800000000000000
+      internalID: 6245356833863084112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866baeea0724286b0800000000000000
+      internalID: -5295597160095893912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d372137556d47850800000000000000
+      internalID: 6373955035127247826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4bb94dfd086b7e0800000000000000
+      internalID: -1750069706353822545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e3cbe0bf2594130800000000000000
+      internalID: 3551461019395833500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_crab_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81916848af8e2f0c0800000000000000
+      internalID: -4543312911400560360
       vertices: []
       indices: 
       edges: []
@@ -285,7 +273,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 774f58746212be741b0b68809361851d
+    spriteID: 78bd60e7f5dc0134899fadaf99854f64
     internalID: 0
     vertices: []
     indices: 

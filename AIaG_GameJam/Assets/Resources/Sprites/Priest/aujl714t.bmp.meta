@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 967ca237d2ce31a4a897d1ced7bbdccf
+guid: 6bd7d6bc9dcd35946b1d48e93d87aff0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2224024403869289055
-    second: gamejam_grids_0
+      213: -7245002609996384123
+    second: aujl714t_0
   - first:
-      213: 2901308039740174106
-    second: gamejam_grids_1
+      213: -8892684809824329665
+    second: aujl714t_1
   - first:
-      213: -3394494648170292047
-    second: gamejam_grids_2
+      213: -7363679490268916324
+    second: aujl714t_2
   - first:
-      213: 6383480190511720226
-    second: gamejam_grids_3
+      213: 7222433492152739453
+    second: aujl714t_3
   - first:
-      213: 5144183814113629215
-    second: gamejam_grids_4
-  - first:
-      213: 3085855178652149448
-    second: gamejam_grids_5
-  - first:
-      213: -1437899757130348746
-    second: gamejam_grids_6
-  - first:
-      213: 6635645650803575390
-    second: gamejam_grids_7
+      213: -1225223477189498254
+    second: aujl714t_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,163 +102,28 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gamejam_grids_0
+      name: aujl714t_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 129
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a5329b869da221e0800000000000000
-      internalID: -2224024403869289055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 135
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1fa2b45a44834820800000000000000
-      internalID: 2901308039740174106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 98
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bc58df2a1554e0d0800000000000000
-      internalID: -3394494648170292047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_3
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 132
-        width: 54
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 227a132896da69850800000000000000
-      internalID: 6383480190511720226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 64
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f149e838cefc36740800000000000000
-      internalID: 5144183814113629215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_5
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 64
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c66cd77fe823da20800000000000000
-      internalID: 3085855178652149448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_6
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 198
-        width: 50
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63700a90acd8b0ce0800000000000000
-      internalID: -1437899757130348746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gamejam_grids_7
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 64
-        width: 20
+        y: 0
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,8 +132,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a438fef8c861c50800000000000000
-      internalID: 6635645650803575390
+      spriteID: 588336a0384947b90800000000000000
+      internalID: -7245002609996384123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aujl714t_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30a8eae746d69480800000000000000
+      internalID: -8892684809824329665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aujl714t_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9511be9484fec990800000000000000
+      internalID: -7363679490268916324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aujl714t_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76e5a9befc3b3460800000000000000
+      internalID: 7222433492152739453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aujl714t_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aa6af2db12ffee0800000000000000
+      internalID: -1225223477189498254
       vertices: []
       indices: 
       edges: []
@@ -285,7 +225,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 774f58746212be741b0b68809361851d
+    spriteID: 2ec5a16b6c2220e41b63759f4cfb9ecc
     internalID: 0
     vertices: []
     indices: 
