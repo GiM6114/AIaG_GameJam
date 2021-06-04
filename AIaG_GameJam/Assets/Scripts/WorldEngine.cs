@@ -15,6 +15,7 @@ public class WorldEngine : MonoBehaviour
     private Animator camAnim;
     private Animator camAnim2;
     private GameObject sbk;
+    private GameObject mxw;
     SoundManager sM;
     SignMenu signMenu;
 
@@ -24,6 +25,7 @@ public class WorldEngine : MonoBehaviour
         camAnim = GameObject.Find("Cinematique").GetComponent<Animator>();
         camAnim2 = GameObject.Find("Main Camera").GetComponent<Animator>();
         sbk = GameObject.Find("SignBreak");
+        mxw = GameObject.Find("MaxiWin");
         player = GameObject.Find("Player");
         sM = player.GetComponent<SoundManager>();
         pI = player.GetComponent<PlayerInput>();
@@ -60,9 +62,9 @@ public class WorldEngine : MonoBehaviour
         GameObject.Find("Canvas").GetComponent<SignMenu>().ActivateSign(idRule);
         StartCoroutine(RuleAnim(idRule));
         Debug.Log(count(_i.signs, true));
-        if (count(_i.signs, true) == 20)
+        if (count(_i.signs, true) == 1)
         {
-            
+            StartCoroutine(MaxiWin(idRule));
         }
     }
 
@@ -106,6 +108,36 @@ public class WorldEngine : MonoBehaviour
         sbk.transform.GetChild(4).gameObject.SetActive(false);
     }
 
+    IEnumerator MaxiWin(int ruleID)
+    {
+        yield return new WaitForSecondsRealtime(8f);
+        Time.timeScale = 0;
+        mxw.transform.localScale = new Vector3(Mathf.Sign(mxw.transform.lossyScale.x) * mxw.transform.localScale.x, 1, 1);
+        pI.SwitchCurrentActionMap("Stop");
+        camAnim.SetBool("cinematique", true);
+        mxw.transform.GetChild(0).gameObject.SetActive(true);
+        mxw.transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        mxw.transform.GetChild(2).gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(0.5f);
+        mxw.transform.GetChild(3).gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(7f);
+        mxw.transform.GetChild(4).gameObject.SetActive(true);
+        mxw.transform.GetChild(2).GetComponent<Animator>().Play("explode3");
+        camAnim.SetBool("cinematique", false);
+        yield return new WaitForSecondsRealtime(1f);
+        Time.timeScale = 1;
+        mxw.transform.GetChild(5).GetComponent<ParticleSystem>().Play();
+        sM.PlaySound("Explosion");
+        camAnim2.Play("shake");
+        pI.SwitchCurrentActionMap("Gameplay");
+        mxw.transform.GetChild(0).gameObject.SetActive(false);
+        mxw.transform.GetChild(1).gameObject.SetActive(false);
+        mxw.transform.GetChild(2).gameObject.SetActive(false);
+        mxw.transform.GetChild(3).gameObject.SetActive(false);
+        mxw.transform.GetChild(4).gameObject.SetActive(false);
+    }
+
     private string getFullRule(int ruleID)
     {
         switch (ruleID)
@@ -136,10 +168,18 @@ public class WorldEngine : MonoBehaviour
                 return "DO NOT LITTER";
             case 12:
                 return "DO NOT FEED THE ANIMALS";
+            case 13: //o
+                return "DO NOT SMOKE";
             case 14:
                 return "DO NOT SWIM HERE";
             case 15:
                 return "DO NOT DISTURB";
+            case 16: //o
+                return "NO FLASH PHOTOGRAPHY";
+            case 17: //o
+                return "DO NOT CLIMB";
+            case 18: //o
+                return "DONT BE LOUD IN THE LIBRARY";
             case 19:
                 return "PLEASE WAIT IN LINE";
         }
