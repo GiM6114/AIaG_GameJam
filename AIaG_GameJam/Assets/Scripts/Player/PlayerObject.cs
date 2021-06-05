@@ -15,6 +15,7 @@ public class PlayerObject : MonoBehaviour
     [SerializeField] GameObject defaultPhysicItem;
     [SerializeField] SpriteRenderer sR;
     [SerializeField] Animator anim;
+    [SerializeField] GameObject carryBois;
 
     public Item item = null;
     List<PhysicItem> itemsNearby = new List<PhysicItem>();
@@ -67,7 +68,9 @@ public class PlayerObject : MonoBehaviour
 
                 if(item.name == "Stick")
                 {
-                    child.transform.localPosition = baton.localPosition;
+                    //child.transform.localPosition = baton.localPosition;
+                    carryBois.SetActive(true);
+                    sR.sprite = null;
                 }
                 else
                 {
@@ -124,6 +127,12 @@ public class PlayerObject : MonoBehaviour
         if (item == null || water.GetTile(water.WorldToCell(transform.position)) != null)
         {
             return;
+        }
+
+        if (item.name == "Stick")
+        {
+            //child.transform.localPosition = baton.localPosition;
+            carryBois.SetActive(false);
         }
 
         GameObject itemDropped = Instantiate(defaultPhysicItem, transform.position+0.05f*Vector3.forward+0.4f*Vector3.right*Mathf.Sign(transform.localScale.x), Quaternion.identity);

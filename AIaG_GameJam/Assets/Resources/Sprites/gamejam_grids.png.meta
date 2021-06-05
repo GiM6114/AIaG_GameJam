@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: -764038672252936212
     second: gamejam_grids_8
+  - first:
+      213: 8888551250049308910
+    second: gamejam_grids_9
+  - first:
+      213: 5536931081617662356
+    second: gamejam_grids_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -292,9 +298,9 @@ TextureImporter:
         x: 5
         y: 18
         width: 38
-        height: 45
+        height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,6 +308,48 @@ TextureImporter:
       bones: []
       spriteID: cefd3b920e69565f0800000000000000
       internalID: -764038672252936212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_grids_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 18
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee81b03b44a7a5b70800000000000000
+      internalID: 8888551250049308910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamejam_grids_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 18
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491e3a99b7127dc40800000000000000
+      internalID: 5536931081617662356
       vertices: []
       indices: 
       edges: []

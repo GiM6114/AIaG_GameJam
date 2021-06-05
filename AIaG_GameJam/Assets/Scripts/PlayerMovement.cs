@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     [System.NonSerialized] public bool beingTped = false;
+    [System.NonSerialized] public bool pushed = false;
 
     float countdown = 0;
     [SerializeField] float repeatSoundWalking;
@@ -71,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(pushed);
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_smoke") || animator.GetCurrentAnimatorStateInfo(0).IsName("player_fish"))
         {
             return;
@@ -97,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             countdown = repeatSoundWalking;
         }
 
-        if (!beingTped)
+        if (!beingTped && !pushed)
         {
             rb.velocity = movement * speed;
         }

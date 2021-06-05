@@ -98,6 +98,7 @@ public class WorldEngine : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1;
         sbk.transform.GetChild(5).GetComponent<ParticleSystem>().Play();
+        player.GetComponent<PlayerMovement>().pushed = false;
         sM.PlaySound("Explosion");
         camAnim2.Play("shake");
         pI.SwitchCurrentActionMap("Gameplay");
