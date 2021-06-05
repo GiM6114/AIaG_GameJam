@@ -7,7 +7,7 @@ public class Bin : InteractibleGiveItem
     [SerializeField] GameObject racoon;
     [SerializeField] float racoonCountdown;
 
-    bool racoonSpawned = false;
+    bool racoonSpawned = true;
 
     private void Update()
     {
