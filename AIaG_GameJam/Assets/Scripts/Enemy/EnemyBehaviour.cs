@@ -83,6 +83,7 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
         transform.localPosition = defaultPosition;
+        transform.localScale = new Vector3(1, 1, 1);
         isChasing = false;
         aiPath.canSearch = false;
         aiPath.canMove = false;

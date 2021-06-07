@@ -7,7 +7,7 @@ public class Librarian : MonoBehaviour
     [SerializeField] InteractibleWithInteract iWA;
     [SerializeField] InteractibleWithInteract iWA2;
     [SerializeField] GameObject text1;
-    [SerializeField] GameObject text2;
+    //[SerializeField] GameObject text2;
     EnemyBehaviour eB;
 
     private void Awake()
@@ -22,17 +22,21 @@ public class Librarian : MonoBehaviour
 
     private void Update()
     {
-        if(!eB.isChasing)
+        if(eB.isChasing)
+        {
+            text1.SetActive(false);
+            //text2.SetActive(false);
+        } else
         {
             text1.SetActive(true);
-            text2.SetActive(false);
         }
     }
 
     private void Angered()
     {
+        Debug.Log("ANGER");
         text1.SetActive(false);
-        text2.SetActive(true);
+        //text2.SetActive(true);
     }
 
     private void BellSound()

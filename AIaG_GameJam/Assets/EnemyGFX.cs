@@ -6,7 +6,9 @@ using Pathfinding;
 public class EnemyGFX : MonoBehaviour
 {
     public AIPath aiPath;
+    public AIDestinationSetter aiDest;
     private Animator anim;
+    public EnemyBehaviour eb;
 
     private void Awake()
     {
@@ -48,20 +50,59 @@ public class EnemyGFX : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
 
-        if (Mathf.Abs(aiPath.velocity.magnitude) > 0f)
+
+        //if (Mathf.Abs(aiPath.velocity.magnitude) > 0f)
+        //if(aiDest.target != null)
+        if (eb!=null)
         {
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("chase"))
+            if (eb.isChasing)
             {
-                anim.Play("chase");
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("chase"))
+                {
+                    anim.Play("chase");
+                }
+            }
+            else
+            {
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    anim.Play("idle");
+                }
+            }
+        } else if (aiDest != null)
+        {
+            if (aiDest.target != null)
+            {
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("chase"))
+                {
+                    anim.Play("chase");
+                }
+            }
+            else
+            {
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    anim.Play("idle");
+                }
+            }
+        } else
+        {
+            if (Mathf.Abs(aiPath.velocity.magnitude) > 0f)
+            {
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("chase"))
+                {
+                    anim.Play("chase");
+                }
+            }
+            else
+            {
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    anim.Play("idle");
+                }
             }
         }
-        else
-        {
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-            {
-                anim.Play("idle");
-            }
-        }
+
 
     }
 }
